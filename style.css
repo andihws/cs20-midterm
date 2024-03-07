@@ -1,0 +1,115 @@
+body {
+    font-family: "Montserrat";
+    margin: 0;
+    padding: 0;
+}
+
+table {
+    background-color: #ffffff;
+    border: 1px solid #d3d3d3;
+    width: 100%;
+    min-height: 200px;
+    margin: 15px 0;
+    padding: 30px 40px;
+}
+
+button {
+    cursor: pointer;
+}
+
+div img {
+    width: 100%;
+}
+
+.layout {
+    display: flex;
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 1000px;
+    padding: 50px 0;
+}
+
+.item {
+    background-color: #ffffff;
+    border: 1px solid #d3d3d3;
+    width: 250px;
+    height: 300px;
+    margin: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.product {
+    border-bottom: 1px solid #d3d3d3;
+    flex-grow: 1;
+    overflow: hidden;
+}
+
+.qty-select {
+    display: flex;
+}
+
+.qty-btn {
+    background-color: #7393b3;
+    border: none;
+    color: #ffffff;
+    font-size: 18px;
+    width: 50px;
+}
+
+.qty {
+    color: #36454f;
+    font-size: 18px;
+    line-height: 50px;
+    text-align: center;
+    flex-grow: 1;
+}
+
+.sidebar {
+    background-color: #f5f5f5;
+    text-align: center;
+    flex-grow: 1;
+    padding: 50px;
+}
+
+.header {
+    background-color: #7393b3;
+    border: 1px solid #d3d3d3;
+    color: #ffffff;
+    line-height: 50px;
+}
+
+td.cart {
+    vertical-align: top;
+    line-height: 25px;
+}
+
+#cart-prod {
+    text-align: left;
+}
+
+#cart-qty {
+    text-align: right;
+}
+
+.order {
+    background-color: #ffffff;
+    border: 1px solid #d3d3d3;
+    color: #36454f;
+    font-family: "Montserrat";
+    font-size: 16px;
+    width: 100%;
+    min-width: 252px;
+    height: 50px;
+    padding: 8px;
+}
+
+.order:hover {
+    background-color: #5f8575;
+    border-color: #5f8575;
+    color: #ffffff;
+}

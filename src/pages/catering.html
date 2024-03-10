@@ -7,13 +7,59 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat"/>
     <link rel="stylesheet" href=""/>
     <style>
-        
+        body {
+            font-family: "Montserrat";
+            margin: 0;
+        }
+        .container {
+            position: absolute;
+            background-color: #DEDAF4;
+            height: 100%;
+            width: 100%;
+        }
+        .cateringForm {
+            margin-top: 5%;
+            display: flex;
+            justify-content: space-evenly;
+        }
+        .row {
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .cateringFormHeader {
+            background-color: #FFFFFF;
+            border-top-left-radius: 5x;
+            border-top-right-radius: 5px ;
+            vertical-align: middle;
+            font-size: 30px;
+            padding-left: 30px;
+            font-weight: 999;
+            color: #F09EA7;
+            height: 100px;
+            line-height: 100px;
+            border-bottom: 1px solid #000000;
+        }
+        .cateringFormContainer {
+            width: 45%;
+            flex-direction: column;
+        }
     </style>
     <script src=""></script>
 </head>
 <body>
-    <form>
-        
-    </form>
+    <div class="container">
+        <form class="cateringForm">
+            <div class="cateringFormContainer">
+                <div class="row">
+                    <div class="cateringFormHeader">
+                        Catering Form
+                    </div>
+                </div>
+                <div class="row" id="basicInfo">
+
+                </div>
+            </div>
+        </form>
+    </div>
 </body>
 </html>

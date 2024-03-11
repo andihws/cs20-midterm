@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catering Catalog - FlashFreezeParlor</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat"/>
-    <link rel="stylesheet" href=""/>
+    <link rel="stylesheet" href="../styles/nav.css"/>
     <style>
         body {
             font-family: "Montserrat";
@@ -19,101 +19,68 @@
             position: absolute;
         }
 
+        .sideShadow {
+            display: none;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            z-index: 0;
+            background-color: #00000040;
+            right: 250px;
+        }
+
         .cateringForm {
-            margin-top: 5%;
+            margin-top: 7%;
             display: flex;
             justify-content: space-evenly;
         }
 
         .row {
-            width: 100%;
-            box-sizing: border-box;
+            background-color: #FFFFFF;
+            margin: 0px 4px 0px 4px;
+            padding: 12px 30px 12px 30px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: start  ;
+            justify-content: space-between;
         }
 
         .cateringFormHeader {
             background-color: #FFFFFF;
-            border-top-left-radius: 5px;
-            border-top-right-radius: 5px;
             vertical-align: middle;
             font-size: 30px;
-            padding-left: 30px;
+            padding: 0 30px 0 30px;
+            margin: 0 -30px 0 -30px;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
             font-weight: 999;
             color: #F09EA7;
             height: 100px;
             line-height: 100px;
-            border-bottom: 1px solid #000000;
+            border-bottom: 1px solid #8f8686;
         }
 
         .cateringFormContainer {
-            width: 45%;
+            background-color: #FFFFFF;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            border-radius: 5px;
+            width: 52%;
+            padding: 0px 30px 0px 30px;
             flex-direction: column;
-        }
-
-        .navBar {
-            width: 60%;
             box-sizing: border-box;
-            background-color: #ffffff;
-            border-bottom-left-radius: 10px;
-            border-bottom-right-radius: 10px;
-            padding:15px;
-            font-size:25px;
-            font-weight:bold;
-            position:sticky;
-            top:0;
-            overflow:hidden;
-            
         }
 
-        #overlay {
-            display: flex;
-            justify-content: space-between;
-
+        .label {
+            width: 230px;
+            font-size: 16px;
+            font-weight: 500;
+            margin: 10px 10px 10px 0px;
         }
 
-        .navBar a, .menu {
-            text-decoration:none;
-            display:inline-block;
-            text-decoration: none;
-            color: #666666;
-        }
-
-        .navBarContainer {
-            display: flex;
-            justify-content: space-evenly;
-        }
-
-        #sideMenu {
-            height: 100%;
-            width: 0;
-            position: absolute;
-            z-index: 1;
-            top: 0;
-            right: 0;
-            background-color: #111;
-            overflow-x: hidden;
-            transition: 0.5s;
-            padding-top: 60px;
-        }
-
-        #sideMenu a {
-            padding: 8px 8px 8px 32px;
-            text-decoration: none;
-            font-size: 25px;
-            color: #818181;
-            display: block;
-            transition: 0.3s;
-        }
-
-        #sideMenu a:hover {
-            color: #f1f1f1;
-        }
-
-        #sideMenu .closebtn {
-            position: absolute;
-            top: 0;
-            right: 25px;
-            font-size: 36px;
-            margin-left: 50px;
+        .input {
+            height: 2em;
+            width: 310px;
         }
     </style>
     <script src="https://code.jquery.com/jquery-3.7.1.js"
@@ -123,44 +90,67 @@
 </head>
 <body>
     <div class="wideBack">
-        <div class="navBarContainer"> 
-            <header class="navBar">
-                <div id="overlay">
-                    <a href="home.html" class="active">Flash Freeze Parlor</a>
-                    <div class="menu"  style="text-align:right;cursor:default" onclick="menuOpen()"> &#9776; </div>
-                   
-                </div>
-            </header>
-        </div>
-
-        <div id="sideMenu">
-            <a href="javascript:void(0)" class="closebtn" onclick="menuClose()">&times;</a>
-            <a href="#">About</a>
-            <a href="#">Services</a>
-            <a href="#">Clients</a>
-            <a href="#">Contact</a>
-        </div>
         
-        <form class="cateringForm">
-            <div class="cateringFormContainer">
-                <div class="row">
+            <div class="navBarContainer"> 
+                <header class="navBar">
+                    <div id="overlay">
+                        <a href="home.html" class="active">Flash Freeze Parlor</a>
+                        <div class="menu"  style="text-align:right;cursor:default" onclick="menuOpen()"> &#9776; </div>
+                    </div>
+                </header>
+            </div>
+
+            <div id="sideMenu">
+                <a href="javascript:void(0)" class="closebtn" onclick="menuClose()">&times;</a>
+                <a href="#">Order Now</a>
+                <a href="#">Catering</a>
+                <a href="#">Testimonials</a>
+                <a href="#">About Us</a>
+            </div>
+            
+            <form class="cateringForm">
+                <div class="cateringFormContainer">
                     <div class="cateringFormHeader">
                         Catering Form
                     </div>
+                    <div class="row" id="basicInfo">   
+                        <div class="label">Name: </div>
+                        <input class="input">
+                    </div>
+                    <div class="row" id="basicInfo">   
+                        <div class="label">Date: </div>
+                        <input class="input">
+                    </div>
+                    <div class="row" id="basicInfo">   
+                        <div class="label">Type of Event: </div>
+                        <input class="input">
+                    </div>
+                    <div class="row" id="basicInfo">   
+                        <div class="label">Pick up time: </div>
+                        <input class="input">
+                    </div>
+                    <div class="row" id="basicInfo">   
+                        <div class="label">Phone Number: </div>
+                        <input class="input">
+                    </div>
+                    <div class="row" id="basicInfo">   
+                        <div class="label">Number of guests: </div>
+                        <input class="input">
+                    </div>
                 </div>
-                <div class="row" id="basicInfo">
-
-                </div>
-            </div>
-        </form>
+            </form>
     </div>
+    <div class="sideShadow" onclick="menuClose()"></div>
 
     <script>
         function menuOpen() {
-            $("#sideMenu").css("width", "250px")
+            $("#sideMenu").css("right", "0px");
+            $("#sideShadow").toggle();
         }
+
         function menuClose() {
-            $("#sideMenu").css("width", "0px")
+            $("#sideMenu").css("right", "-250px");
+            $("#sideShadow").toggle();
         }
     </script>
 </body>

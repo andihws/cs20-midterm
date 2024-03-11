@@ -8,8 +8,12 @@
     <link rel="stylesheet" href="../styles/nav.css"/>
     <style>
         body {
-            font-family: "Montserrat";
             margin: 0;
+        }
+
+        * {
+            font-family: "Montserrat";
+            overflow:hidden
         }
 
         .wideBack {
@@ -33,16 +37,6 @@
             margin-top: 7%;
             display: flex;
             justify-content: space-evenly;
-        }
-
-        .row {
-            background-color: #FFFFFF;
-            margin: 0px 4px 0px 4px;
-            padding: 12px 30px 12px 30px;
-            display: flex;
-            flex-wrap: wrap;
-            align-items: start  ;
-            justify-content: space-between;
         }
 
         .cateringFormHeader {
@@ -71,6 +65,16 @@
             box-sizing: border-box;
         }
 
+        .row {
+            background-color: #FFFFFF;
+            margin: 0px 4px 0px 4px;
+            padding: 12px 30px 12px 30px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: start  ;
+            justify-content: space-between;
+        }
+
         .label {
             width: 230px;
             font-size: 16px;
@@ -78,9 +82,20 @@
             margin: 10px 10px 10px 0px;
         }
 
-        .input {
+        input[type="text"] {
             height: 2em;
+            font-size: 16px;
             width: 310px;
+        }
+
+        .orderHeader {
+            padding: 50px 0px;
+            font-size: 30px;
+            color: #F09EA7;
+            width: 80%;
+            font-weight: 999;
+            border-top: 2px solid #8f8686;
+            font-style: italic;
         }
     </style>
     <script src="https://code.jquery.com/jquery-3.7.1.js"
@@ -102,7 +117,7 @@
 
             <div id="sideMenu">
                 <a href="javascript:void(0)" class="closebtn" onclick="menuClose()">&times;</a>
-                <a href="#">Order Now</a>
+                <a href="../../catalog.html">Order Now</a>
                 <a href="#">Catering</a>
                 <a href="#">Testimonials</a>
                 <a href="#">About Us</a>
@@ -115,27 +130,31 @@
                     </div>
                     <div class="row" id="basicInfo">   
                         <div class="label">Name: </div>
-                        <input class="input">
+                        <input type="text">
                     </div>
                     <div class="row" id="basicInfo">   
                         <div class="label">Date: </div>
-                        <input class="input">
+                        <input type="text">
                     </div>
                     <div class="row" id="basicInfo">   
                         <div class="label">Type of Event: </div>
-                        <input class="input">
+                        <input type="text">
                     </div>
                     <div class="row" id="basicInfo">   
                         <div class="label">Pick up time: </div>
-                        <input class="input">
+                        <input type="text">
                     </div>
                     <div class="row" id="basicInfo">   
                         <div class="label">Phone Number: </div>
-                        <input class="input">
+                        <input type="text">
                     </div>
                     <div class="row" id="basicInfo">   
                         <div class="label">Number of guests: </div>
-                        <input class="input">
+                        <input type="text">
+                    </div>
+                    <div class="row" id="ordering">   
+                        <div class="orderHeader">Place your order</div>
+                        <div></div>
                     </div>
                 </div>
             </form>

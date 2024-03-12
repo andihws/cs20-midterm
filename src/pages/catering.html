@@ -1,40 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catering Catalog - FlashFreezeParlor</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat"/>
-    <link rel="stylesheet" href="../styles/nav.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat" />
+    <link rel="stylesheet" href="../styles/nav.css" />
     <style>
         body {
             margin: 0;
+            background-color: #DEDAF4;
+            overflow: auto;
+        }
+
+        .wideBack {
+            overflow-y: scroll;
+
         }
 
         * {
             font-family: "Montserrat";
-            overflow:hidden
-        }
-
-        .wideBack {
-            background-color: #DEDAF4;
-            height: 100%; 
-            width: 100%;
-            position: absolute;
-        }
-
-        .sideShadow {
-            display: none;
-            position: absolute;
-            height: 100%;
-            width: 100%;
-            z-index: 0;
-            background-color: #00000040;
-            right: 250px;
         }
 
         .cateringForm {
             margin-top: 7%;
+            padding-bottom: 200px;
             display: flex;
             justify-content: space-evenly;
         }
@@ -71,7 +62,7 @@
             padding: 12px 30px 12px 30px;
             display: flex;
             flex-wrap: wrap;
-            align-items: start  ;
+            align-items: start;
             justify-content: space-between;
         }
 
@@ -88,8 +79,12 @@
             width: 310px;
         }
 
+        #ordering {
+            flex-direction: column;
+        }
+
         .orderHeader {
-            padding: 50px 0px;
+            padding: 40px 0px;
             font-size: 30px;
             color: #F09EA7;
             width: 80%;
@@ -97,80 +92,175 @@
             border-top: 2px solid #8f8686;
             font-style: italic;
         }
+
+        .qty-btn {
+            background-color: #7393b3;
+            border: none;
+            text-align: center;
+            line-height: 20px;
+            color: #ffffff;
+            font-size: 18px;
+            height: 30px;
+            width: 30px;
+        }
+
+        .qty {
+            color: #36454f;
+            font-size: 20px;
+            text-align: center;
+            flex-grow: 1;
+            width: 40px;
+            max-height: 30px;
+            border: 1px solid;
+        }
     </style>
     <script src="https://code.jquery.com/jquery-3.7.1.js"
-            integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+            integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" 
             crossorigin="anonymous">
     </script>
+    <script src="../scripts/script.js">
+    </script>
 </head>
+
 <body>
     <div class="wideBack">
-        
-            <div class="navBarContainer"> 
-                <header class="navBar">
-                    <div id="overlay">
-                        <a href="home.html" class="active">Flash Freeze Parlor</a>
-                        <div class="menu"  style="text-align:right;cursor:default" onclick="menuOpen()"> &#9776; </div>
-                    </div>
-                </header>
-            </div>
-
-            <div id="sideMenu">
-                <a href="javascript:void(0)" class="closebtn" onclick="menuClose()">&times;</a>
-                <a href="../../catalog.html">Order Now</a>
-                <a href="#">Catering</a>
-                <a href="#">Testimonials</a>
-                <a href="#">About Us</a>
-            </div>
-            
-            <form class="cateringForm">
-                <div class="cateringFormContainer">
-                    <div class="cateringFormHeader">
-                        Catering Form
-                    </div>
-                    <div class="row" id="basicInfo">   
-                        <div class="label">Name: </div>
-                        <input type="text">
-                    </div>
-                    <div class="row" id="basicInfo">   
-                        <div class="label">Date: </div>
-                        <input type="text">
-                    </div>
-                    <div class="row" id="basicInfo">   
-                        <div class="label">Type of Event: </div>
-                        <input type="text">
-                    </div>
-                    <div class="row" id="basicInfo">   
-                        <div class="label">Pick up time: </div>
-                        <input type="text">
-                    </div>
-                    <div class="row" id="basicInfo">   
-                        <div class="label">Phone Number: </div>
-                        <input type="text">
-                    </div>
-                    <div class="row" id="basicInfo">   
-                        <div class="label">Number of guests: </div>
-                        <input type="text">
-                    </div>
-                    <div class="row" id="ordering">   
-                        <div class="orderHeader">Place your order</div>
-                        <div></div>
-                    </div>
+        <div class="navBarContainer">
+            <header class="navBar">
+                <div id="overlay">
+                    <a href="home.html" class="active">Flash Freeze Parlor</a>
+                    <div class="menu" style="text-align:right;cursor:default" onclick="menuOpen()"> &#9776; </div>
                 </div>
-            </form>
+            </header>
+        </div>
+
+        <div id="sideMenu">
+            <a href="javascript:void(0)" class="closebtn" onclick="menuClose()">&times;</a>
+            <a href="../../catalog.html">Order Now</a>
+            <a href="catering.html">Catering</a>
+            <a href="#">Testimonials</a>
+            <a href="#">About Us</a>
+        </div>
+
+        <form class="cateringForm">
+            <div class="cateringFormContainer">
+                <div class="cateringFormHeader">
+                    Catering Form
+                </div>
+                <div class="row" id="basicInfo">
+                    <div class="label">Name: </div>
+                    <input type="text">
+                </div>
+                <div class="row" id="basicInfo">
+                    <div class="label">Date: </div>
+                    <input type="text">
+                </div>
+                <div class="row" id="basicInfo">
+                    <div class="label">Type of Event: </div>
+                    <input type="text">
+                </div>
+                <div class="row" id="basicInfo">
+                    <div class="label">Pick up time: </div>
+                    <input type="text">
+                </div>
+                <div class="row" id="basicInfo">
+                    <div class="label">Phone Number: </div>
+                    <input type="text">
+                </div>
+                <div class="row" id="basicInfo">
+                    <div class="label">Number of guests: </div>
+                    <input type="text">
+                </div>
+                <div class="row" id="ordering">
+                    <div class="orderHeader">Place your order</div>
+                </div>
+                <div class="row" id="order1">
+                    <div class="label" id="item" data-flavor="Vanilla">Vanilla</div>
+                        <div style="display:flex">
+                            <button type="button" class="qty-btn" onclick="decrement(this.id[3])" id="dec1">-</button>
+                            <div class="qty" id="qty1">0</div>
+                            <button type="button" class="qty-btn" onclick="increment(this.id[3])" id="inc1">+</button>
+                        </div>
+                    </div>
+                <div class="row" id="order2">
+                    <div class="label" id="item" data-flavor="Chocolate">Chocolate</div>
+                        <div style="display:flex">
+                            <button type="button" class="qty-btn" onclick="decrement(this.id[3])" id="dec2">-</button>
+                            <div class="qty" id="qty2">0</div>
+                            <button type="button" class="qty-btn" onclick="increment(this.id[3])" id="inc2">+</button>
+                        </div>
+                    </div>
+                <div class="row" id="order3">
+                    <div class="label" id="item" data-flavor="Strawberry">Strawberry</div>
+                        <div style="display:flex">
+                            <button type="button" class="qty-btn" onclick="decrement(this.id[3])" id="dec3">-</button>
+                            <div class="qty" id="qty3">0</div>
+                            <button type="button" class="qty-btn" onclick="increment(this.id[3])" id="inc3">+</button>
+                        </div>
+                    </div>
+                <div class="row" id="order4">
+                    <div class="label" id="item" data-flavor="Mint Chocolate Chip">Mint Chocolate Chip</div>
+                        <div style="display:flex">
+                            <button type="button" class="qty-btn" onclick="decrement(this.id[3])" id="dec4">-</button>
+                            <div class="qty" id="qty4">0</div>
+                            <button type="button" class="qty-btn" onclick="increment(this.id[3])" id="inc4">+</button>
+                        </div>
+                    </div>
+                <div class="row" id="order5">
+                    <div class="label" id="item" data-flavor="Rocky Road">Rocky Road</div>
+                        <div style="display:flex">
+                            <button type="button" class="qty-btn" onclick="decrement(this.id[3])" id="dec5">-</button>
+                            <div class="qty" id="qty5">0</div>
+                            <button type="button" class="qty-btn" onclick="increment(this.id[3])" id="inc5">+</button>
+                        </div>
+                    </div>
+                <div class="row" id="order6">
+                    <div class="label" id="item" data-flavor="Coffee">Coffee</div>
+                        <div style="display:flex">
+                            <button type="button" class="qty-btn" onclick="decrement(this.id[3])" id="dec6">-</button>
+                            <div class="qty" id="qty6">0</div>
+                            <button type="button" class="qty-btn" onclick="increment(this.id[3])" id="inc6">+</button>
+                        </div>
+                    </div>
+                <div class="row" id="order7">
+                    <div class="label" id="item" data-flavor="Matcha">Matcha</div>
+                        <div style="display:flex">
+                            <button type="button" class="qty-btn" onclick="decrement(this.id[3])" id="dec7">-</button>
+                            <div class="qty" id="qty7">0</div>
+                            <button type="button" class="qty-btn" onclick="increment(this.id[3])" id="inc7">+</button>
+                        </div>
+                    </div>
+                <div class="row" id="order8">
+                    <div class="label" id="item" data-flavor="Milk Tea">Milk Tea</div>
+                        <div style="display:flex">
+                            <button type="button" class="qty-btn" onclick="decrement(this.id[3])" id="dec8">-</button>
+                            <div class="qty" id="qty8">0</div>
+                            <button type="button" class="qty-btn" onclick="increment(this.id[3])" id="inc8">+</button>
+                        </div>
+                    </div>
+                <div class="row" id="order9">
+                    <div class="label" id="item" data-flavor="Ube">Ube</div>
+                        <div style="display:flex">
+                            <button type="button" class="qty-btn" onclick="decrement(this.id[3])" id="dec9">-</button>
+                            <div class="qty" id="qty9">0</div>
+                            <button type="button" class="qty-btn" onclick="increment(this.id[3])" id="inc9">+</button>
+                        </div>
+                    </div>
+            </div>
+        </form>
     </div>
     <div class="sideShadow" onclick="menuClose()"></div>
 
     <script>
         function menuOpen() {
             $("#sideMenu").css("right", "0px");
-            $("#sideShadow").toggle();
+            $(".sideShadow").toggle();
         }
 
         function menuClose() {
             $("#sideMenu").css("right", "-250px");
-            $("#sideShadow").toggle();
+            $(".sideShadow").toggle();
         }
     </script>
 </body>
+
 </html>

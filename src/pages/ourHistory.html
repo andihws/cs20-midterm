@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our History - FlashFreezeParlor</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat" />
+    <link rel="stylesheet" href="../styles/nav.css" />
+    <style>
+        * {
+            font-family: "Montserrat";
+        }
+
+        body {
+            margin: 0;
+            background-color: #DEDAF4;
+            overflow: auto;
+        }
+
+        .wideBack {
+            overflow-y: scroll;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" 
+        crossorigin="anonymous">
+    </script>
+</head>
+<body>
+    <div class="wideBack">
+        <div class="navBarContainer">
+            <header class="navBar">
+                <div id="overlay">
+                    <a href="home.html" class="active">Flash Freeze Parlor</a>
+                    <div class="menu" style="text-align:right;cursor:default" onclick="menuOpen()"> &#9776; </div>
+                </div>
+            </header>
+        </div>
+    
+        <div id="sideMenu">
+            <a href="javascript:void(0)" class="closebtn" onclick="menuClose()">&times;</a>
+            <a href="../../catalog.html">Order Now</a>
+            <a href="catering.html">Catering</a>
+            <a href="#">Testimonials</a>
+            <a href="#">About Us</a>
+        </div>
+    </div>
+    <div class="sideShadow" onclick="menuClose()"></div>
+
+    <script>
+        function menuOpen() {
+            $("#sideMenu").css("right", "0px");
+            $(".sideShadow").toggle();
+        }
+
+        function menuClose() {
+            $("#sideMenu").css("right", "-250px");
+            $(".sideShadow").toggle();
+        }
+    </script>
+</body>
+</html>

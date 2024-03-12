@@ -12,16 +12,12 @@ let cart = {
 
 function decrement(id) {
     let qtyField = document.getElementById("qty" + id);
-    let flavor = qtyField.closest("#item").dataset.flavor;
     if (qtyField.innerHTML > 0) {
         qtyField.innerHTML--;
-        cart[flavor]--;
     }
 }
 
 function increment(id) {
     let qtyField = document.getElementById("qty" + id);
-    let flavor = qtyField.closest("#item").dataset.flavor;
     qtyField.innerHTML++;
-    cart[flavor]++;
 }

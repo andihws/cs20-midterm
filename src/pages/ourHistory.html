@@ -18,7 +18,44 @@
         }
 
         .wideBack {
-            overflow-y: scroll;
+            width: 100%;
+        }
+
+        .content {
+            background-color: #000000;
+            box-sizing: border-box; 
+            border: 2px solid;
+            justify-content: space-evenly;
+            border-radius: 20px;
+            display: flex;
+            margin: 2% 10%; 
+        }
+
+        .historyHeader   {
+            font-size: 40px;
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: 7%;
+            color: #F09EA7;
+        }
+
+        .years1, .years2, .photos { 
+            width: 30%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+        }
+        
+        .longText {
+            font-size: 20px;
+            color: #FFFFFF;
+            padding: 10% 2%;
+        }
+
+        div > h2 {
+            font-weight: 999;
+            font-size: 50px;
+            color: #FFFFFF;
         }
     </style>
     <script src="https://code.jquery.com/jquery-3.7.1.js"
@@ -36,7 +73,6 @@
                 </div>
             </header>
         </div>
-    
         <div id="sideMenu">
             <a href="javascript:void(0)" class="closebtn" onclick="menuClose()">&times;</a>
             <a href="../../catalog.html">Order Now</a>
@@ -44,9 +80,77 @@
             <a href="#">Testimonials</a>
             <a href="#">About Us</a>
         </div>
+        <div class="historyHeader">
+            <h1>Our History</h1>
+        </div>
+        <div class="content">
+            <div class="years1">
+                <h2 class="year">
+                    2020
+                </h2>
+                <div class="longText">
+                    It all started with a single, groundbreaking idea that
+                    struck in the quiet of the night, an idea that would turn
+                    the traditional ice cream world on its head. Our founders,
+                    Allison, Aryaa, Baydan, and Geneva found themselves
+                    questioning the status quo, pondering why ice cream flavors
+                    had to be limited to the usual suspects. This curiosity
+                    wasn’t just a passing thought; it was the kindling for a
+                    fire that would ignite a revolution in taste.
+                </div>
+                <h2 class="year">
+                    2021
+                </h2>
+                <div class="longText">
+                    In those early days, our kitchen resembled less a food prep
+                    space and more a mad scientist’s lab, filled with vials of
+                    exotic extracts and bowls brimming with unusual ingredient
+                    pairings. It was here, amidst this chaos of creativity,
+                    that our first breakthrough occurred—a flavor so
+                    unexpected, so unconventional, that it shattered all
+                    preconceived notions of what ice cream could be. Each new
+                    batch was a gamble, a fusion of art and science, as we
+                    blended the most improbable ingredients to see what magic
+                    could arise.
+
+                </div>
+            </div>
+            <div class="years2">
+                <h2 class="year">
+                    2022
+                </h2>
+                <div class="longText">
+                    This phase of relentless experimentation was marked by many
+                    late nights and early mornings, fueled by a shared passion
+                    and countless cups of coffee. Our team tasted, tweaked, and
+                    sometimes, started all over again from scratch. But with
+                    each failure came a valuable lesson, and with each success,
+                    a new milestone was reached. We weren’t just making ice
+                    cream anymore; we were crafting experiences, memories, and
+                    most importantly, joy in every scoop.
+
+                </div>
+                <h2 class="year">
+                    2023
+                </h2>
+                <div class="longText">
+                    The path we chose was not easy. It required courage,
+                    persistence, and a sprinkle of madness. But looking back,
+                    every challenge faced and obstacle overcome only added to
+                    the richness of our journey, much like the layers of
+                    flavors in our now-celebrated ice cream creations. This is
+                    the essence of our parlor, a place where daring dreams turn
+                    into delicious reality.
+                </div>
+            </div>
+            <div class="photos">
+                <img style="border-radius: 20px;" src="../../img/iceCreamHistory1.jpg">
+                <img style="border-radius: 20px;"src="../../img/iceCreamHistory2.jpg">
+            </div>
+        </div>
     </div>
     <div class="sideShadow" onclick="menuClose()"></div>
-
+    
     <script>
         function menuOpen() {
             $("#sideMenu").css("right", "0px");

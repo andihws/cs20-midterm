@@ -7,121 +7,14 @@
     <title>Catering Catalog - FlashFreezeParlor</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat" />
     <link rel="stylesheet" href="../styles/nav.css" />
-    <style>
-        body {
-            margin: 0;
-            background-color: #DEDAF4;
-            overflow: auto;
-        }
-
-        .wideBack {
-            overflow-y: scroll;
-
-        }
-
-        * {
-            font-family: "Montserrat";
-        }
-
-        .cateringForm {
-            margin-top: 7%;
-            padding-bottom: 200px;
-            display: flex;
-            justify-content: space-evenly;
-        }
-
-        .cateringFormHeader {
-            background-color: #FFFFFF;
-            vertical-align: middle;
-            font-size: 30px;
-            padding: 0 30px 0 30px;
-            margin: 0 -30px 0 -30px;
-            border-top-left-radius: 5px;
-            border-top-right-radius: 5px;
-            font-weight: 999;
-            color: #F09EA7;
-            height: 100px;
-            line-height: 100px;
-            border-bottom: 1px solid #8f8686;
-        }
-
-        .cateringFormContainer {
-            background-color: #FFFFFF;
-            border-top-left-radius: 5px;
-            border-top-right-radius: 5px;
-            border-radius: 5px;
-            width: 52%;
-            padding: 0px 30px 0px 30px;
-            flex-direction: column;
-            box-sizing: border-box;
-        }
-
-        .row {
-            background-color: #FFFFFF;
-            margin: 0px 4px 0px 4px;
-            padding: 12px 30px 12px 30px;
-            display: flex;
-            flex-wrap: wrap;
-            align-items: start;
-            justify-content: space-between;
-        }
-
-        .label {
-            width: 230px;
-            font-size: 16px;
-            font-weight: 500;
-            margin: 10px 10px 10px 0px;
-        }
-
-        input[type="text"] {
-            height: 2em;
-            font-size: 16px;
-            width: 310px;
-        }
-
-        #ordering {
-            flex-direction: column;
-        }
-
-        .orderHeader {
-            padding: 40px 0px;
-            font-size: 30px;
-            color: #F09EA7;
-            width: 80%;
-            font-weight: 999;
-            border-top: 2px solid #8f8686;
-            font-style: italic;
-        }
-
-        .qty-btn {
-            background-color: #7393b3;
-            border: none;
-            text-align: center;
-            line-height: 20px;
-            color: #ffffff;
-            font-size: 18px;
-            height: 30px;
-            width: 30px;
-        }
-
-        .qty {
-            color: #36454f;
-            font-size: 20px;
-            text-align: center;
-            flex-grow: 1;
-            width: 40px;
-            max-height: 30px;
-            border: 1px solid;
-        }
-    </style>
+    <link rel="stylesheet" href="../styles/catering.css"/>
     <script src="https://code.jquery.com/jquery-3.7.1.js"
             integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" 
             crossorigin="anonymous">
     </script>
-    <script src="../scripts/script.js">
+    <script src="../scripts/scriptCatering.js">
     </script>
 </head>
-
 <body>
     <div class="wideBack">
         <div class="navBarContainer">
@@ -144,7 +37,7 @@
         <form class="cateringForm">
             <div class="cateringFormContainer">
                 <div class="cateringFormHeader">
-                    Catering Form
+                    <h1>Catering Form</h1>
                 </div>
                 <div class="row" id="basicInfo">
                     <div class="label">Name: </div>
@@ -152,7 +45,7 @@
                 </div>
                 <div class="row" id="basicInfo">
                     <div class="label">Date: </div>
-                    <input type="text">
+                    <input type="date">
                 </div>
                 <div class="row" id="basicInfo">
                     <div class="label">Type of Event: </div>
@@ -170,81 +63,94 @@
                     <div class="label">Number of guests: </div>
                     <input type="text">
                 </div>
+                <div class="row" id="basicInfo"> 
+                    <div class="label">Delivery or pickup: </div>
+                    <div class="devPickOption">   
+                        <div>
+                            <label>Delivery</label>
+                            <input type="radio" name="buyOption">
+                        </div>
+                        <div>   
+                            <label>Pickup</label>
+                            <input type="radio" name="buyOption">
+                        </div>
+                    </div>     
+                </div>
                 <div class="row" id="ordering">
-                    <div class="orderHeader">Place your order</div>
+                    <div class="orderHeader"><h2>Place your order</h2></div>
                 </div>
                 <div class="row" id="order1">
                     <div class="label" id="item" data-flavor="Vanilla">Vanilla</div>
-                        <div style="display:flex">
-                            <button type="button" class="qty-btn" onclick="decrement(this.id[3])" id="dec1">-</button>
-                            <div class="qty" id="qty1">0</div>
-                            <button type="button" class="qty-btn" onclick="increment(this.id[3])" id="inc1">+</button>
-                        </div>
+                    <div style="display:flex">
+                        <button type="button" class="qty-btn" onclick="decrement(this.id[3])" id="dec1">-</button>
+                        <div class="qty" id="qty1">0</div>
+                        <button type="button" class="qty-btn" onclick="increment(this.id[3])" id="inc1">+</button>
                     </div>
+                </div>
                 <div class="row" id="order2">
                     <div class="label" id="item" data-flavor="Chocolate">Chocolate</div>
-                        <div style="display:flex">
-                            <button type="button" class="qty-btn" onclick="decrement(this.id[3])" id="dec2">-</button>
-                            <div class="qty" id="qty2">0</div>
-                            <button type="button" class="qty-btn" onclick="increment(this.id[3])" id="inc2">+</button>
-                        </div>
+                    <div style="display:flex">
+                        <button type="button" class="qty-btn" onclick="decrement(this.id[3])" id="dec2">-</button>
+                        <div class="qty" id="qty2">0</div>
+                        <button type="button" class="qty-btn" onclick="increment(this.id[3])" id="inc2">+</button>
                     </div>
+                </div>
                 <div class="row" id="order3">
                     <div class="label" id="item" data-flavor="Strawberry">Strawberry</div>
-                        <div style="display:flex">
-                            <button type="button" class="qty-btn" onclick="decrement(this.id[3])" id="dec3">-</button>
-                            <div class="qty" id="qty3">0</div>
-                            <button type="button" class="qty-btn" onclick="increment(this.id[3])" id="inc3">+</button>
-                        </div>
+                    <div style="display:flex">
+                        <button type="button" class="qty-btn" onclick="decrement(this.id[3])" id="dec3">-</button>
+                        <div class="qty" id="qty3">0</div>
+                        <button type="button" class="qty-btn" onclick="increment(this.id[3])" id="inc3">+</button>
                     </div>
+                </div>
                 <div class="row" id="order4">
                     <div class="label" id="item" data-flavor="Mint Chocolate Chip">Mint Chocolate Chip</div>
-                        <div style="display:flex">
-                            <button type="button" class="qty-btn" onclick="decrement(this.id[3])" id="dec4">-</button>
-                            <div class="qty" id="qty4">0</div>
-                            <button type="button" class="qty-btn" onclick="increment(this.id[3])" id="inc4">+</button>
-                        </div>
+                    <div style="display:flex">
+                        <button type="button" class="qty-btn" onclick="decrement(this.id[3])" id="dec4">-</button>
+                        <div class="qty" id="qty4">0</div>
+                        <button type="button" class="qty-btn" onclick="increment(this.id[3])" id="inc4">+</button>
                     </div>
+                </div>
                 <div class="row" id="order5">
                     <div class="label" id="item" data-flavor="Rocky Road">Rocky Road</div>
-                        <div style="display:flex">
-                            <button type="button" class="qty-btn" onclick="decrement(this.id[3])" id="dec5">-</button>
-                            <div class="qty" id="qty5">0</div>
-                            <button type="button" class="qty-btn" onclick="increment(this.id[3])" id="inc5">+</button>
-                        </div>
+                    <div style="display:flex">
+                        <button type="button" class="qty-btn" onclick="decrement(this.id[3])" id="dec5">-</button>
+                        <div class="qty" id="qty5">0</div>
+                        <button type="button" class="qty-btn" onclick="increment(this.id[3])" id="inc5">+</button>
                     </div>
+                </div>
                 <div class="row" id="order6">
                     <div class="label" id="item" data-flavor="Coffee">Coffee</div>
-                        <div style="display:flex">
-                            <button type="button" class="qty-btn" onclick="decrement(this.id[3])" id="dec6">-</button>
-                            <div class="qty" id="qty6">0</div>
-                            <button type="button" class="qty-btn" onclick="increment(this.id[3])" id="inc6">+</button>
-                        </div>
+                    <div style="display:flex">
+                        <button type="button" class="qty-btn" onclick="decrement(this.id[3])" id="dec6">-</button>
+                        <div class="qty" id="qty6">0</div>
+                        <button type="button" class="qty-btn" onclick="increment(this.id[3])" id="inc6">+</button>
                     </div>
+                </div>
                 <div class="row" id="order7">
                     <div class="label" id="item" data-flavor="Matcha">Matcha</div>
-                        <div style="display:flex">
-                            <button type="button" class="qty-btn" onclick="decrement(this.id[3])" id="dec7">-</button>
-                            <div class="qty" id="qty7">0</div>
-                            <button type="button" class="qty-btn" onclick="increment(this.id[3])" id="inc7">+</button>
-                        </div>
+                    <div style="display:flex">
+                        <button type="button" class="qty-btn" onclick="decrement(this.id[3])" id="dec7">-</button>
+                        <div class="qty" id="qty7">0</div>
+                        <button type="button" class="qty-btn" onclick="increment(this.id[3])" id="inc7">+</button>
                     </div>
+                </div>
                 <div class="row" id="order8">
                     <div class="label" id="item" data-flavor="Milk Tea">Milk Tea</div>
-                        <div style="display:flex">
-                            <button type="button" class="qty-btn" onclick="decrement(this.id[3])" id="dec8">-</button>
-                            <div class="qty" id="qty8">0</div>
-                            <button type="button" class="qty-btn" onclick="increment(this.id[3])" id="inc8">+</button>
-                        </div>
+                    <div style="display:flex">
+                        <button type="button" class="qty-btn" onclick="decrement(this.id[3])" id="dec8">-</button>
+                        <div class="qty" id="qty8">0</div>
+                        <button type="button" class="qty-btn" onclick="increment(this.id[3])" id="inc8">+</button>
                     </div>
+                </div>
                 <div class="row" id="order9">
                     <div class="label" id="item" data-flavor="Ube">Ube</div>
-                        <div style="display:flex">
-                            <button type="button" class="qty-btn" onclick="decrement(this.id[3])" id="dec9">-</button>
-                            <div class="qty" id="qty9">0</div>
-                            <button type="button" class="qty-btn" onclick="increment(this.id[3])" id="inc9">+</button>
-                        </div>
+                    <div style="display:flex">
+                        <button type="button" class="qty-btn" onclick="decrement(this.id[3])" id="dec9">-</button>
+                        <div class="qty" id="qty9">0</div>
+                        <button type="button" class="qty-btn" onclick="increment(this.id[3])" id="inc9">+</button>
                     </div>
+                </div>
             </div>
         </form>
     </div>

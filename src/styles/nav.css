@@ -38,7 +38,7 @@
     top: 0;
     width: 250px;
     right: -250px;
-    background-color: #D9EDF8;
+    background-color: #bedff0;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
@@ -54,7 +54,7 @@
 }
 
 #sideMenu a:hover {
-    color: #f1f1f1;
+    color: #001126;
 }
 
 #sideMenu .closebtn {

@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home page</title>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat"/>
+    <style>
+        body {
+            font-family: "Montserrat";
+            margin: 0;
+        }
+
+        .content {
+            margin:auto;
+            margin-left:10%;
+            margin-right:10%;
+            color:#666666;
+        }
+
+        .mission {
+            /* background-color: #f2f2f2; */
+            max-width:100%;
+            height:auto;
+            display: flex;
+            border-radius: 20px;
+            margin-bottom:20px;
+        }
+
+        .events {
+            /* background-color: #f2f2f2; */
+            max-width:100%;
+            height:auto;
+            display: inline-block;
+            border-radius: 20px;
+        }
+
+        .image {
+            max-width: 100%;
+            max-height:100%;
+            padding:15px;
+            margin:auto;
+        }
+
+        .missionTxt > #longTxt, .text {
+            text-align:center;
+            font-size: 20px;
+            padding-left: 20px;
+            padding-right:20px;
+            color: #666666;
+        }
+
+        .productsList {
+            max-width:100%;
+            justify-content:center;
+            box-sizing: border-box;
+            height:auto;
+            display: flex;
+            flex-wrap: wrap;
+            border-radius: 20px;
+            margin-bottom:20px;
+            overflow:hidden;
+        }
+
+        .product {
+            background-color: #DEDAF4;
+            border-radius: 20px;
+            width:300px;
+            text-align:center;
+            box-sizing: border-box;
+            margin:18px;
+            padding: 20px;
+        }
+
+        .ice {
+            margin-top: 8px;
+        }
+
+        .name, .description {
+            font-size: 20px;
+        }
+
+        .callToAction {
+            background-color: #f2f2f2;
+            box-sizing: border-box;
+            width:208px;
+            height:auto;
+            padding:5px 5px;
+            text-align:center;
+            border-radius: 20px;
+            display:block;
+            text-decoration: none;
+            color: #666666;
+            margin:auto;
+        }
+
+        .callToAction a {
+            text-decoration: none;
+            color: #666666;
+        }
+
+        #moreProduct {
+            background-color: #f2f2f2;
+            width:190px;
+            height:20px;
+            padding:10px;
+            border-radius: 20px;
+            display:block;
+            text-decoration: none;
+            color: #666666;
+            margin:auto;
+        }
+
+        #moreProduct:hover, .callToAction:hover {
+            background-color:#ddeeea;
+            color:black;
+        }
+
+        .item {
+            display:flex;
+            padding:10px 15px 0px 15px;
+            box-sizing: border-box;
+        }
+        
+        #title {
+            font-size:30px;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: xx-large;
+            color:#666666;
+            /* padding:8px; */
+        }
+
+        h3 {
+            width:150px;
+        }
+
+        .item > ul {
+            padding-right:20px;
+        }
+
+        .navBar {
+            width: 60%;
+            box-sizing: border-box;
+            background-color: #ffffff;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            padding:15px;
+            font-size:25px;
+            font-weight:bold;
+            position:sticky;
+            top:0;
+            overflow:hidden;
+            
+        }
+
+        #overlay {
+            display: flex;
+            justify-content: space-between;
+
+        }
+
+        .navBar a, .menu {
+            text-decoration:none;
+            display:inline-block;
+            color: #666666;
+        }
+
+        .navBarContainer {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        #sideMenu {
+            height: 100%;
+            width: 0;
+            position: absolute;
+            z-index: 1;
+            top: 0;
+            right: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+
+        #sideMenu a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+
+        #sideMenu a:hover {
+            color: #f1f1f1;
+        }
+
+        #sideMenu .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        .missionTxt > #shortTxt, .missionTxt > #shorterTxt{
+            display:none;
+        }
+
+        @media(max-width:1260px){
+            .product:nth-child(3){
+                display:none;
+            }
+        }
+
+        @media(max-width:1000px){
+            .missionTxt > #longTxt{
+                display:none;
+            }
+            .missionTxt > #shortTxt{
+                display:block;
+                text-align:center;
+                font-size: 20px;
+                padding-left: 20px;
+                padding-right:20px;
+                color: #666666;
+            }
+        }
+
+        @media(max-width:800px){
+            .missionTxt > #shortTxt{
+                display:none;
+            }
+            .missionTxt > #shorterTxt{
+                display:block;
+                text-align:center;
+                font-size: 20px;
+                padding-left: 20px;
+                padding-right:20px;
+                color: #666666;
+            }
+
+            .mission {
+                flex-direction: column;
+            }
+
+            .item {
+                flex-direction: column;
+                font-size:20px;
+            }
+
+            h3 {
+                width:100%;
+                margin:auto;
+            }
+
+            ul b {
+                font-size:24px;
+            }
+
+            .image img {
+                width:300px;
+            }
+        }
+
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+            integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+            crossorigin="anonymous">
+    </script>
+</head>
+
+<body>
+    
+    <div class="navBarContainer"> 
+        <header class="navBar">
+            <div id="overlay">
+                <a href="home.html" class="active">Flash Freeze Parlor</a>
+                <div class="menu" style="text-align:right;cursor:default" onclick="menuOpen()"> &#9776; </div>
+                
+            </div>
+        </header>
+    </div>
+
+    <div id="sideMenu">
+        <a href="javascript:void(0)" class="closebtn" onclick="menuClose()">&times;</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Clients</a>
+        <a href="#">Contact</a>
+    </div>
+
+
+    <script>
+        function menuOpen() {
+            $("#sideMenu").css("width", "250px")
+        }
+        function menuClose() {
+            $("#sideMenu").css("width", "0px")
+        }
+    </script>
+
+    <div class = slides></div>
+
+    <div class = content>
+
+        <div class =mission>
+            <div class=image><img class = logo src="Flash Freeze logo.jpg"></div>
+        
+            <div class = missionTxt>
+                <h2>Our Mission</h2>
+                <p id="longTxt"> At Flash Freeze Parlor, we strive to redefine the traditional ice 
+                    cream experience by offering a unique and imaginative array 
+                    of flavors that challenge and delight the taste buds. Our 
+                    mission is to create unforgettable, joy-filled moments through 
+                    our innovative ice cream creations. We are committed to quality, 
+                    creativity, and community, providing a space where customers can 
+                    unleash their culinary curiosity. By offering a convenient in-store 
+                    pickup service, we ensure that every interaction with our ice cream 
+                    parlor is as smooth and enjoyable as our confections. Welcome 
+                    to Flash Freeze Parlor - where your wildest ice cream dreams come to 
+                    life!”</p>
+
+                <p id="shortTxt">At Flash Freeze Parlor, we strive to redefine the traditional ice 
+                    cream experience by offering a unique and imaginative array 
+                    of flavors that challenge and delight the taste buds. Our 
+                    mission is to create unforgettable, joy-filled moments through 
+                    our innovative ice cream creations. We are committed to quality, 
+                    creativity, and community, providing a space where customers can 
+                    unleash their culinary curiosity.</p>
+
+                <p id="shorterTxt">Our mission is to create unforgettable, joy-filled
+                     moments through our innovative ice cream creations. We are 
+                     committed to quality, creativity, and community, providing 
+                     a space where customers can unleash their culinary curiosity.</p>
+            </div>
+        </div>
+
+        <div class="callToAction">
+            <a href="catalog.html" class="active"><h1>Order Now</h1></a>
+        </div>
+
+        <br/>
+        <h2>Our Featured Flavors</h2>
+        <div class = productsList>
+            <div class = product> 
+                <img class = ice src="lavHoneyCrunch.jpg">
+                <div class = info>
+                    <p class=name><b>Lavender Honeycomb Crunch</b></p>
+                    <p class=description>A sweet floral lavender ice cream mixed 
+                        with crunchy honeycomb pieces</p>
+                </div>
+            </div>
+
+            <div class = product> 
+                <img class = ice src="cornAndRaspberry.jpg">
+                <div class = info>
+                    <p class=name><b>Sweet Corn & Raspberry Ripple</b></p>
+                    <p class=description> A unique blend of sweet corn ice cream
+                         with a tart raspberry ripple.</p>
+                </div>
+            </div>
+
+            <div class = product> 
+                <img class = ice src="saltyCaramelPretzel.jpg">
+                <div class = info>
+                    <p class=name><b>Salty Caramel Pretzel Swirl</b></p>
+                    <p class=description>A rich caramel ice cream intertwined with 
+                        salty pretzel bits and a ribbon of caramel swirl</p>
+                </div>
+            </div>
+
+            
+        </div>
+        <div><a id = "moreProduct" href="catalog.html">Click Here To See More</a></div>
+
+        <h2>Keep an Eye Out For...</h2>
+        <div class=events>
+            
+            <div class="item">
+                <h3>Flavor Creation Workshop</h3>
+                <ul>
+                    <li id="date"><b>Date:</b> March 20, 2024</li>
+                    <li id="time"><b>Time:</b> 3:00PM - 5:00PM</li>
+                    <li id="description"><b>Description:</b> Join us for an exclusive 
+                        workshop where you get to be the ice cream chef! Learn the 
+                        basics of ice cream making and let your creativity flow by 
+                        creating your own unique flavor.</li>
+                </ul>
+            </div>
+            
+
+            <div class="item">
+                <h3>Ice Cream Social Night</h3>
+                <ul>
+                    <li id="date"><b>Date:</b> April 5, 2024</li>
+                    <li id="time"><b>Time:</b> 7:00PM - 9:00PM</li>
+                    <li id="description"><b>Description:</b> Enjoy a delightful evening
+                        at our Ice Cream Social Night. Sample our unique flavors, 
+                        meet other ice cream enthusiasts, and vote for your favorite 
+                        flavor to be featured next month!</li>
+                </ul>
+            </div>
+
+        </div>
+
+    </div>
+    
+</body>
+</html>

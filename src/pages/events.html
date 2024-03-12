@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat"/>
+    <title>Document</title>
+
+    <style>
+        .banner_container {
+            position: relative;
+            text-align: center;
+        }
+
+        .banner {
+            filter: blur(3px);
+        }
+
+        .banner_text {
+            position: absolute;
+            padding-right:20px;
+            padding-left: 20px;
+            font-size: 40px;
+            position:absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            text-align: center;
+            background-color:rgb(217, 217, 217, 0.6);
+            box-sizing: border-box;
+            border-radius:100px;
+        }
+
+        .heading {
+            font-size:35px;
+        }
+
+        .content ul{
+            font-size: 22px;
+        }
+
+        .content{
+            width: 75%;
+            background-color:#ffffff;
+        }
+
+        body .content {
+            font-family:"Montserrat";
+            color:#666666;
+            padding:20px 20px 20px 20px;
+            border-radius:25px;
+        }
+        
+        ul b {
+            font-weight:900;
+            color:#4d4d4d;
+            font-size:25px;
+        }
+
+        .page_container {
+            background-color:#fce297;
+            overflow:hidden;
+        }
+
+        @media(max-width:950px){
+            .banner_text {
+                padding-right:10px;
+                padding-left: 10px;
+                font-size: 30px;
+                border-radius:75px;
+            }
+        }
+
+        @media(max-width:675px){
+            .banner_text {
+                padding-right:10px;
+                padding-left: 10px;
+                font-size: 25px;
+                border-radius:65px;
+            }
+        }
+
+        @media(max-width:550px){
+            .banner_text {
+                padding-right:10px;
+                padding-left: 10px;
+                font-size: 18px;
+                border-radius:57px;
+            }
+
+            ul b {
+                font-weight:900;
+                color:#4d4d4d;
+                font-size:20px;
+            }
+
+            .content ul{
+                font-size: 18px;
+            }
+
+            .heading {
+                font-size:25px;
+            }
+        }
+
+    </style>
+
+
+</head>
+<body>
+    <div class="page_container">
+        
+        <div class="banner_container">
+            <img class="banner" src="eventsBanner.jpg" 
+            alt="two people getting ice cream at store" style="width:100%">
+            <div class = banner_text style="font-family:Montserrat"><h1> Upcoming Events </h1></div>
+        </div>
+
+        <br><br>
+
+        <div class = content style="margin-left: 10%;margin-right:10%" >
+        
+            <h2 class="heading">Flavor Creation Workshop</h2>
+            <ul>
+                <li id="date"><b>Date:</b> March 20, 2024</li>
+                <li id="time"><b>Time:</b> 3:00PM - 5:00PM</li>
+                <li id="description"><b>Description:</b> Join us for an exclusive 
+                    workshop where you get to be the ice cream chef! Learn the 
+                    basics of ice cream making and let your creativity flow by 
+                    creating your own unique flavor.
+                </li>
+            </ul>
+    
+            <h2 class="heading">Ice Cream Social Night</h2>
+            <ul>
+                <li id="date"><b>Date:</b> April 5, 2024</li>
+                <li id="time"><b>Time:</b> 7:00PM - 9:00PM</li>
+                <li id="description"><b>Description:</b> Enjoy a delightful evening
+                     at our Ice Cream Social Night. Sample our unique flavors, 
+                     meet other ice cream enthusiasts, and vote for your favorite 
+                     flavor to be featured next month!
+                </li>
+            </ul>
+    
+            <h2 class="heading">Sundae Fun-dae Family Day</h2>
+            <ul>
+                <li id="date"><b>Date:</b> April 19, 2024</li>
+                <li id="time"><b>Time:</b> 12:00PM - 4:00PM</li>
+                <li id="description"><b>Description:</b> Bring the whole family for
+                     a fun-filled day of ice cream, games, and laughter. Build your 
+                     dream sundae with unlimited toppings and enjoy various 
+                     family-friendly activities.
+                </li>
+            </ul>
+    
+            <h2 class="heading">Eco-Friendly Flavor Launch</h2>
+            <ul>
+                <li id="date"><b>Date:</b> May 10, 2024</li>
+                <li id="time"><b>Time:</b> 1:00PM - 2:00PM</li>
+                <li id="description"><b>Description:</b> We're committed to 
+                    sustainability, and we're launching a new, eco-friendly flavor! 
+                    Join us for the launch event, learn about our sustainable 
+                    practices, and enjoy free samples of our latest creation.
+                </li>
+            </ul>
+    
+            <h2 class="heading">Midnight Dessert Jazz</h2>
+            <ul>
+                <li id="date"><b>Date:</b> May 24, 2024</li>
+                <li id="time"><b>Time:</b> 10:00PM - 12:00AM</li>
+                <li id="description"><b>Description:</b> Experience the magic of 
+                    jazz under the stars at our Midnight Dessert Jazz event. Enjoy 
+                    our gourmet ice cream while listening to live jazz performances.
+                </li>
+            </ul>
+    
+            <h2 class="heading">Midnight Dessert Jazz</h2>
+            <ul>
+                <li id="date"><b>Date:</b> June 7, 2024</li>
+                <li id="time"><b>Time:</b> 2:00PM - 5:00PM</li>
+                <li id="description"><b>Description:</b> Showcase your artistic 
+                    skills in our Ice Cream Art Contest. Create art inspired by our 
+                    ice cream flavors for a chance to win sweet prizes and have 
+                    your artwork displayed in our parlor.
+                </li>
+            </ul>
+    
+        </div>
+        <br><br>
+
+    </div>
+</body>
+</html>

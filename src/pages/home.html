@@ -15,10 +15,25 @@
         }
 
         .content {
-            margin-top:7%;
+            position: relative;
+            margin-top:600px;
             margin-left:10%;
             margin-right:10%;
             color:#666666;
+        }
+
+        .slideshow {
+            display: block;
+            overflow: hidden;
+        }
+
+        .slide {
+            position: absolute;
+            display: none;
+        }
+
+        .slide img {
+            width: 100vw;
         }
 
         .mission {
@@ -203,7 +218,6 @@
                 width:300px;
             }
         }
-
     </style>
     <script src="https://code.jquery.com/jquery-3.7.1.js"
             integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
@@ -242,9 +256,39 @@
             $("#sideMenu").css("right", "-250px");
             $(".sideShadow").toggle();
         }
+
+        $(document).ready(function() {
+            var slides = $(".slide");
+            var slideIndex = 0;
+
+            $(slides[slideIndex]).show();
+
+            setInterval(function() {
+                $(slides[slideIndex]).fadeOut();
+                slideIndex = (slideIndex + 1) % slides.length;
+                console.log(slideIndex);
+                $(slides[slideIndex]).fadeIn();
+            }, 5000);
+        });
     </script>
 
-    <div class = slides></div>
+    <div class="slideshow">
+        <div class="slide">
+            <img src="../../img/slide1.jpg"/>
+        </div>
+        <div class="slide">
+            <img src="../../img/slide2.jpg"/>
+        </div>
+        <div class="slide">
+            <img src="../../img/slide3.jpg"/>
+        </div>
+        <div class="slide">
+            <img src="../../img/slide4.jpg"/>
+        </div>
+        <div class="slide">
+            <img src="../../img/slide5.jpg"/>
+        </div>
+    </div>
 
     <div class = content>
 

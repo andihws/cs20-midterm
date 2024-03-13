@@ -28,51 +28,52 @@
         <a href="javascript:void(0)" class="closebtn" onclick="menuClose()">&times;</a>
         <a href="catalog.html">Order Now</a>
         <a href="catering.html">Catering</a>
+        <a href="#">Contact Us</a>
         <a href="#">Testimonials</a>
-        <a href="ourHistory.html">About Us</a>
+        <a href="our_history.html">About Us</a>
     </div>
 
-    <form class="cateringForm">
+    <form class="cateringForm" name="cateringForm" onsubmit="formValidate();return false">
         <div class="cateringFormContainer">
             <div class="cateringFormHeader">
                 <h1>Catering Form</h1>
             </div>
             <div class="row" id="basicInfo">
                 <div class="label">Name: </div>
-                <input type="text" name="name" id="name">
+                <input type="text" name="name" id="name" required>
             </div>
             <div class="row" id="basicInfo">
                 <div class="label">Date: </div>
-                <input type="date" name="date" id="date">
+                <input type="date" name="date" id="date" required>
             </div>
             <div class="row" id="basicInfo">
                 <div class="label">Type of Event: </div>
-                <input type="text" name="typeEvent" id="typeEvent">
+                <input type="text" name="typeEvent" id="typeEvent" required>
             </div>
             <div class="row" id="basicInfo">
                 <div class="label">Pick up time: </div>
-                <input type="text" name="pickUp" id="pickUp">
+                <input type="text" name="pickUp" id="pickUp" required>
             </div>
             <div class="row" id="basicInfo">
                 <div class="label">Phone Number: </div>
-                <input type="text" name="phone" id="phone">
+                <input type="text" name="phone" id="phone" required>
             </div>
             <div class="row" id="basicInfo">
                 <div class="label">Number of guests: </div>
-                <input type="text" name="guests" id="guests">
+                <input type="text" name="guests" id="guests" required>
             </div>
             <div class="row" id="basicInfo"> 
                 <div class="label">Delivery or pickup: </div>
                 <div class="devPickOption">   
                     <div>
                         <label>Delivery
-                            <input type="radio" name="buyOption" value="del" id="del">
+                            <input type="radio" name="buyOption" value="del" id="del" required>
                         </label>
                         
                     </div>
                     <div>   
                         <label>Pickup
-                            <input type="radio" name="buyOption" value="pickup" id="pickup">
+                            <input type="radio" name="buyOption" value="pickup" id="pickup" required>
                         </label>
                         
                     </div>

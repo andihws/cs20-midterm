@@ -32,9 +32,8 @@ html {
 }
 
 .cateringFormContainer {
+    border: 2px solid;
     background-color: #FFFFFF;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
     border-radius: 5px;
     width: 52%;
     padding: 0px 30px 0px 30px;
@@ -115,6 +114,7 @@ input[type="text"], input[type="date"] {
     width: 200px;
     border-radius: 10px;
 }
+
 
 @media (max-width:728px) {
     .cateringForm {

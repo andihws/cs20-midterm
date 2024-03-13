@@ -1,13 +1,14 @@
 let cart = {
-    "Vanilla": 0,
-    "Chocolate": 0,
-    "Strawberry": 0,
-    "Mint Chocolate Chip": 0,
-    "Rocky Road": 0,
-    "Coffee": 0,
-    "Matcha": 0,
-    "Milk Tea": 0,
-    "Ube": 0
+    "Bacon Maple": 0,
+    "Blackberry Balsamic": 0,
+    "Corn and Raspberry": 0,
+    "Espresso Martini": 0,
+    "Lavender Honey Crunch": 0,
+    "Matcha Green Tea": 0,
+    "Pumpkin Spice": 0,
+    "Salty Caramel Pretzel": 0,
+    "Spiced Pear": 0,
+    "Toasted Coconut": 0
 };
 
 function decrement(id) {
@@ -31,12 +32,15 @@ function increment(id) {
 function updateCart() {
     let prods = "";
     let qtys = "";
+    let total = 0;
     for (var product in cart) {
         if (cart[product] != 0) {
             prods += product + "<br/>";
             qtys += "x" + cart[product] + "<br/>";
+            total += cart[product] * 4.99;
         }
     }
     document.getElementById("cart-prod").innerHTML = prods;
     document.getElementById("cart-qty").innerHTML = qtys;
+    document.getElementById("cart-total-2").innerHTML = "$" + total.toFixed(2);
 }

@@ -1,14 +1,16 @@
 let cart = {
-    "Bacon Maple": 0,
-    "Blackberry Balsamic": 0,
-    "Corn and Raspberry": 0,
-    "Espresso Martini": 0,
-    "Lavender Honey Crunch": 0,
-    "Matcha Green Tea": 0,
-    "Pumpkin Spice": 0,
-    "Salty Caramel Pretzel": 0,
-    "Spiced Pear": 0,
-    "Toasted Coconut": 0
+    "Lavender Honeycomb Crunch": 0,
+    "Salty Caramel Pretzel Swirl": 0,
+    "Spiced Pear & Blue Cheese": 0,
+    "Matcha Green Tea & Black Sesame": 0,
+    "Espresso Martini Madness": 0,
+    "Sweet Corn & Raspberry Ripple": 0,
+    "Toasted Coconut & Lime Zest": 0,
+    "Pumpkin Spice Latte": 0,
+    "Bacon Maple Pancake": 0,
+    "Mojito Sorbet": 0,
+    "Fig & Honey Cheesecake": 0,
+    "Blackberry Balsamic Bliss": 0
 };
 
 function decrement(id) {

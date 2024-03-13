@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat"/>
+    <link rel="stylesheet" href="../styles/nav.css" />
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+            integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" 
+            crossorigin="anonymous">
+    </script>
+    <title>Testimonials</title>
+    <style type="text/CSS">
+      * {
+        font-family: "Montserrat";
+        }
+        .wide-back {
+            background-color: #DEDAF4;
+            height: 100%; 
+            width: 100%;
+        }
+        .banner{
+            width: 100%; 
+            min-height: 90vh;
+            background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(img/testBanner.jpg);
+            filter: blur(3px);
+            background-position: center; 
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+            margin-bottom: 5%;
+        }
+        .home-heading{
+            width: 100%;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #f2f1ee;
+            text-align: center;
+        }
+        .home-heading h1{
+            font-size: 40px;
+            margin-bottom: 1%;
+        }
+        html{
+            background-color: #DEDAF4;
+        }
+        .main-heading{
+            text-align: center;
+            color: #E4F1EE;
+            padding-top: 15%;
+            padding: 15%;
+            position: relative;
+        }
+        .test-row{
+            box-sizing: border-box;
+            background: #f2f2f2;
+            border-radius: 10px;
+            margin-bottom: 5%;
+            padding: 2%;
+            box-sizing: border-box;
+            align-items: center;
+            margin-left: 20%;
+            margin-right: 20%;
+        }
+        .test-row:last-child{
+            margin-bottom: 8%;
+        }
+        .test-row p h3{
+            justify-content: center;
+            font-size: 20px;
+        }
+        .test-row p{
+            font-size: 22px;
+            margin-top: 8%;
+        }
+        .test-col{
+            display: flex;
+        }
+        .test-row h3{
+            font-size: 22px;
+        }
+        .person-img{
+            justify-content: center;
+            margin-right: 3%;
+            border-radius: 10px;
+            height: 250px;
+            width: auto;
+        }
+        .testimonials h2{
+            text-align: center;
+            padding: 5%;
+            font-size: 30px;
+        }
+        .col-text{
+            display: block;
+        }
+        @media(max-width: 950px){
+            .home-heading h1{
+                font-size: 17px;
+            }
+            .test-row{
+                text-align: center;
+                padding: 3%;
+                font-size: 10px;
+            }
+            .test-col p{
+                justify-content: space-between;
+                font-size: 12px;
+            }
+            .test-row h3{
+                font-size: 12px;
+            }
+            .test-row h3 p{
+                width: 10%;
+            }
+            .test-col{
+                display: inline;
+                padding: 3%;
+                font-size: 15px;
+            }
+            .person-img{
+                padding-top: 2%;
+                justify-content: center;
+            }
+        }
+        /* footer  */
+        .footer{
+            width: 100%;
+            text-align: center;
+            padding: 25px 0;
+            background: #e2e1eb;
+            font-size: 400;
+            margin-top: 20px;
+        }
+        .footer p{
+            font-size: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wide-back">
+        <div class="navBarContainer">
+            <header class="navBar">
+                <div id="overlay">
+                    <a href="home.html" class="active">Flash Freeze Parlor</a>
+                    <div class="menu" style="text-align:right;cursor:default" onclick="menuOpen()"> &#9776; </div>
+                </div>
+            </header>
+        </div>
+
+        <div id="sideMenu">
+            <a href="javascript:void(0)" class="closebtn" onclick="menuClose()">&times;</a>
+            <a href="../../catalog.html">Order Now</a>
+            <a href="catering.html">Catering</a>
+            <a href="#">Testimonials</a>
+            <a href="#">About Us</a>
+        </div>
+        <div class="content-container">
+
+            <div class="banner"></div>
+            <div class="home-heading">
+                    <h1>HEAR FROM OUR HAPPY CUSTOMERS</h1>
+            </div>
+            <div class="testimonials">
+                <h2>Testimonials</h2>
+            <div class="test-row">
+                    <div class="test-col">
+                        <img src="img/debra.jpg" class="person-img">
+                        <div class="col-text">
+                        <p>"Choosing a flavor at Flash Freeze Parlor is always a thrilling challenge. With an eclectic mix of 
+                            traditional and exotic flavors, there's always something new to try. My personal favorite has to 
+                            be the {insert flavor}."</p>   
+                            <h3>- Debra Densinson</h3>                      
+                        </div>
+                    </div>           
+                </div>        
+                <div class="test-row">
+                    <div class="test-col">
+                        <img src="img/john.jpg" class="person-img">
+                        <div class="col-text">
+                            <p>"From the moment I stepped into Flash Freeze Parlor, I knew I was in for a treat unlike any other. 
+                                The vibrant atmosphere, coupled with the sweet aroma of freshly made waffle cones, was inviting. 
+                                Each scoop of ice cream is not just a treat but an experience."</p>
+                            <h3> - John Smitterson</h3>                                         
+                        </div>  
+                    </div>  
+                </div>
+
+                <div class="test-row">
+                    <div class="test-col">
+                        <img src="img/Carl.jpg" class="person-img">
+                        <div class="col-text">
+                            <p>"What sets Flash Freeze Parlor apart is not just their innovative freezing technique or their wide variety of 
+                                flavors, but also their commitment to quality ingredients. Flash Freeze Parlor isn't just an ice cream shop; 
+                                it's a delightful escape that keeps me coming back for more."</p> 
+                            <h3>- Carl Crawsinton</h3> 
+                        </div>
+                    </div>
+                </div>
+                <div class="test-row">
+                    <div class="test-col">
+                        <img src="img/paul.jpg" class="person-img">
+                        <div class="col-text">
+                            <p>"An aspect that keeps me coming back to Flash Freeze Parlor is their cozy and welcoming environment. 
+                                Whether I'm popping in for a quick treat or lingering over a cone with friends, the space is 
+                                designed to make everyone feel at home."</p>          
+                            <h3>- Paul Patterson</h3>
+                        </div>
+                    </div>             
+                </div>
+                <div class="test-row">
+                    <div class="test-col">
+                        <img src="img/tilly.jpg" class="person-img">
+                        <div class="col-text">
+                            <p>"The sense of community at Flash Freeze Parlor is palpable. It's not just a place to satisfy your sweet tooth; 
+                                it's a neighborhood gem where staff remember your name and your favorite flavors. Their commitment to bringing
+                                smiles to customer' faces, one scoop at a time."</p>  
+                            <h3>- Tilly Takleston</h3> 
+                        </div>
+                    </div>           
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer  -->
+    <div class="footer">
+    <p>Flash Freeze Parlor LLC</p>
+    </div>
+
+    <div class="sideShadow" onclick="menuClose()"></div>
+
+    <script>
+        function menuOpen() {
+            $("#sideMenu").css("right", "0px");
+            $(".sideShadow").toggle();
+        }
+
+        function menuClose() {
+            $("#sideMenu").css("right", "-250px");
+            $(".sideShadow").toggle();
+        }
+    </script>
+
+    
+</body>
+</html>
+

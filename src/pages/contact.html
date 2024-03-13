@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact and Locations</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat"/>
+    <link rel="stylesheet" href="../styles/nav.css" />
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+            integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" 
+            crossorigin="anonymous">
+    </script>
+    <style type="text/CSS">
+        *{
+            font-family: "Montserrat";
+          }
+        .wide-back {
+            height: 100%; 
+            width: 100%;
+        }
+        html{
+            background-color: #DEDAF4;
+        }
+        .banner{
+            width: 100%; 
+            min-height: 90vh;
+            background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),url(img/locateBanner.jpg);
+            filter: blur(2px);
+            background-position: center; 
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+            margin-bottom: 5%;
+        }
+        .home-heading{
+            width: 100%;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #f2f1ee;
+            text-align: center;
+        }
+        .home-heading h1{
+            font-size: 40px;
+            margin-bottom: 1%;
+        }
+        /* locations */
+        .location-map {
+            padding-bottom: 50%;
+            position: relative;
+        }
+        .location-map iframe {
+            height: 70%;
+            width: 50%;
+            left: 0;
+            top: 0;
+            margin-left: 5%;
+            position: absolute;
+        }
+        .location-content{
+            margin: 3%;
+            max-width: 100%
+        }
+        .location-content h2{
+            text-align: center;
+            font-size: 25px;
+            margin-top: 10%;
+            margin-bottom: 10%;
+        }
+        .location-words{
+            float: right;
+            margin-top: -50%; 
+            margin-right: 10%;
+            flex-basis: 31%;
+            background: #f2f2f2;
+            border-radius: 10px;
+            margin-bottom: 5%;
+            padding-left: 2%;
+            padding-right: 7%;
+            padding-bottom: 4%;
+            box-sizing: border-box;
+        }
+        .location-words h3{
+            font-size: 25px;
+        }
+        .location-words ul li{
+            justify-content: space-between;
+            line-height: 200%;
+        }
+        .contact-left{
+            margin-left: 15%;
+            margin-right: 15%;
+        }
+        .contact-left h3{
+            font-size: 22px;
+        }
+        .form{
+            margin-right: 15%;
+
+        }
+        .row{
+            display: flex;
+            margin-bottom: 5%;
+        }
+        .contact-container h2{
+            text-align: center;
+            font-size: 25px;
+            margin-bottom: 5%;
+        }
+        .contact-container{
+            width: 100%;
+        }
+
+        /* -------contact------- */
+        #contact h3{
+            text-align: center;
+            font-size: 25px;
+        }
+        .row{
+            display: flex;
+        }
+        .contact-left{
+            margin: 3%;
+            margin-left: 10%;
+            margin-right: 10%;
+            width: 15%;
+        }
+        .contact-right{
+            margin-top: 3%;
+            margin-right: 10%;
+            max-width: fit-content;
+        }
+        .btn{
+            display: inline-block;
+            background: #dedede;
+        }
+        form input{
+            width: 100%;
+            border: 0; 
+            background: #eae9f1;
+            padding: 15px;
+            margin: 15px 0;
+            color: #000;
+            font-size: 18px;
+            border-radius: 6px;
+            border-style: solid ;
+        }
+        form #messsage{
+            height: 50px;
+        }
+
+        form .btn{
+            padding: 14px 60 px;
+            font-size: 18px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+
+        /* footer  */
+        .foot{
+            background-color: #fafafa !important;
+        }
+        .foot .row{
+            margin-left: 10%;
+            margin-right: 10%;
+            margin-top: 2%;
+            display: flex;
+            justify-content: space-between;
+            line-height: 1;
+        }
+        .footer{
+            text-align: right;
+        }
+        .foot h4{
+            padding-top: 2%;
+            text-align: center;
+            margin-bottom: 2%;
+            margin-top: 2%;
+            font-weight: 600;
+        }
+
+        @media(max-width: 1100px){
+            .location-words{
+                float: right;
+                margin-right: 10%;
+                margin-left: 5%;
+                background: #f2f2f2;
+                border-radius: 10px;
+                margin-bottom: 5%;
+                padding-left: 2%;
+                padding-right: 7%;
+                padding-bottom: 4%;
+                box-sizing: border-box;
+            }
+            .location-words h3{
+                margin-top: 3%;
+                font-size: 20px;
+            }
+            .location-words h4{
+                font-size: 13px;
+            }
+            .location-words ul li{
+                justify-content: space-between;
+                line-height: 200%;
+                font-size: 10px;
+            }
+        }
+
+        @media(max-width: 960px){
+            .home-heading h1{
+                font-size: 25px;
+            }
+            #contact h3{
+                text-align: center;
+                font-size: 20px;
+            }
+            .contact-left h1{
+                font-size: 20px;
+            }
+            .location-words{
+                margin: 0;
+                background-color: #f2f2f2;
+                float: none;
+                width: 73%;
+                padding-top: 5%;
+                padding-left: 6%;
+                margin-left: 13%;
+                margin-bottom: 15%;
+                text-align: center;
+            }
+            .location-words ul li{
+                margin-left: -8%;
+                list-style: none;
+            }
+            .location-map iframe{
+                height: 90%;
+                width: 70%;
+                margin-left: 14%;
+            }
+            .location-map{
+                margin-bottom: 5%;
+                position: relative;
+            }
+            .row{
+                display: inline;
+                margin-left: 5%;
+            }
+            .contact-left{
+                width: 80%;
+                text-align: center;
+                
+            }
+            .contact-right{
+                margin-left: 5%;
+            }
+        }
+        /* footer  */
+        .footer{
+            width: 100%;
+            text-align: center;
+            padding: 25px 0;
+            background: #e2e1eb;
+            font-size: 400;
+            margin-top: 20px;
+        }
+        .footer p{
+            font-size: 15px;
+        }
+    </style>
+</head>
+<body>
+<div class="wide-back">
+    <div class="navBarContainer">
+        <header class="navBar">
+            <div id="overlay">
+                <a href="home.html" class="active">Flash Freeze Parlor</a>
+                <div class="menu" style="text-align:right;cursor:default" onclick="menuOpen()"> &#9776; </div>
+            </div>
+        </header>
+    </div>
+
+    <div id="sideMenu">
+        <a href="javascript:void(0)" class="closebtn" onclick="menuClose()">&times;</a>
+        <a href="../../catalog.html">Order Now</a>
+        <a href="catering.html">Catering</a>
+        <a href="#">Testimonials</a>
+        <a href="#">About Us</a>
+    </div>
+    <div class="page-container">
+        <div class="banner"></div>
+        <div class="home-heading">
+            <h2>LOCATE US</h2>
+        </div>
+        <div class="location-content">
+            <h2>OUR LOCATION</h2>
+            <div class="location-col">
+                <div class="location-map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7886733.450329344!2d-87.69570580523572!3d40.49342537460464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e26a8d5e9a88c5%3A0xbee3580fa3034adc!2sParlor%20Salon!5e0!3m2!1sen!2sus!4v1710260744534!5m2!1sen!2sus" 
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>        
+                </div>  
+                <div class="location-words">
+                    <h3>Flash Freeze Parlor</h3>
+                    <h4>Address: 2184 Main St, Concard</h4>
+                    <h4>Store Hours</h4>
+                    <ul>
+                        <li>Monday:   9AM - 9PM </li>
+                        <li>Tuesday:   9AM - 9PM </li>
+                        <li>Wednesday:  9AM - 9PM </li>
+                        <li>Thursday:   9AM - 9PM </li>
+                        <li>Friday:   9AM - 9PM </li>
+                        <li>Saturday:   9AM - 9PM </li>
+                        <li>Sunday:   9AM - 9PM </li>
+                    </ul>
+                </div> 
+
+            </div>
+        </div>
+        <!-- ---------------------contact---------------- -->
+        <div id="contact">
+            <h3>LEAVE A MESSAGE</h3>
+            <div class="contact-container">
+                <div class="row">
+                    <div class="contact-left">
+                        <h1>Contact US</h1>
+                        <p>freezeflashen@gmail.com</p>
+                        <p>131-234-5322</p>
+                        <div class="para">
+                            <p>Flash Freeze Parlor LLC</p>
+                        </div>
+                    </div>
+                    <div class="contact-right">
+                        <form method="get" action="#"> 
+                            <input type="text" name="Name" placeholder="Your Name" required>
+                            <input type="email" name="Email"placeholder="Your Email" required>
+                            <input type="message" id="message" name="Message" placeholder="Your Message" required>
+                            <button type="submit" class="btn">Submit</button>
+                        </form>
+                        <span id="msg"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer  -->
+    <div class="footer">
+        <p>Flash Freeze Parlor LLC</p>
+    </div>
+
+    <div class="sideShadow" onclick="menuClose()"></div>
+
+    <script>
+        function menuOpen() {
+            $("#sideMenu").css("right", "0px");
+            $(".sideShadow").toggle();
+        }
+
+        function menuClose() {
+            $("#sideMenu").css("right", "-250px");
+            $(".sideShadow").toggle();
+        }
+    </script>
+        
+</div>
+</div> 
+</body>
+</html>

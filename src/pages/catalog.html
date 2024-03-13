@@ -12,6 +12,13 @@
                 margin: 0;
             }
 
+            h1 {
+                background-color: #362d46;
+                color: #ffffff;
+                padding: 90px 75px 30px 75px;
+                margin: 0;
+            }
+
             table {
                 background-color: #ffffff;
                 border: 1px solid #d3d3d3;
@@ -39,7 +46,7 @@
                 flex-wrap: wrap;
                 justify-content: center;
                 width: 1000px;
-                padding: 100px 0;
+                padding: 35px 0;
             }
 
             .item {
@@ -90,11 +97,11 @@
                 background-color: #6a5a8a;
                 text-align: center;
                 flex-grow: 1;
-                padding: 115px 50px;
+                padding: 50px;
             }
 
             .header {
-                background-color: #282136;
+                background-color: #362d46;
                 border: 1px solid #d3d3d3;
                 border-radius: 10px;
                 color: #ffffff;
@@ -136,7 +143,7 @@
                 background-color: #dedaf4;
                 border: 1px solid #d3d3d3;
                 border-radius: 10px;
-                color: #36454f;
+                color: #362d46;
                 font-family: "Montserrat";
                 font-size: 16px;
                 width: 100%;
@@ -146,7 +153,7 @@
             }
 
             .order:hover {
-                background-color: #282136;
+                background-color: #362d46;
                 color: #ffffff;
             }
         </style>
@@ -162,7 +169,6 @@
                 </div>
             </header>
         </div>
-
         <div id="sideMenu">
             <a href="javascript:void(0)" class="closebtn" onclick="menuClose()">&times;</a>
             <a href="../../catalog.html">Order Now</a>
@@ -170,9 +176,7 @@
             <a href="#">Testimonials</a>
             <a href="#">About Us</a>
         </div>
-
         <div class="sideShadow" onclick="menuClose()"></div>
-
         <script>
             function menuOpen() {
                 $("#sideMenu").css("right", "0px");
@@ -184,6 +188,7 @@
                 $(".sideShadow").toggle();
             }
         </script>
+        <h1>Made for you...</h1>
         <div class="layout">
             <div class="grid">
                 <div class="item" data-flavor="Lavender Honeycomb Crunch">

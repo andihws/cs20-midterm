@@ -75,3 +75,27 @@
     bottom: 0;
     z-index: 0;
 }
+
+@media (max-width: 728px) {
+    .navBar {
+        width: 60%;
+        box-sizing: border-box;
+        background-color: #ffffff;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        padding:15px;
+        font-size:15px;
+        font-weight:bold;
+        position: fixed;
+        top:0;
+        overflow:hidden;
+    }
+    #sideMenu a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 20px;
+        color: #3267c2;
+        display: block;
+        transition: 0.3s;
+    }
+}

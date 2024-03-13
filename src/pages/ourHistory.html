@@ -35,8 +35,8 @@
             font-size: 40px;
             display: flex;
             justify-content: space-evenly;
-            margin-top: 7%;
-            color: #F09EA7;
+            margin-top: 3%;
+            color: #000000;
         }
 
         .years1, .years2, .photos { 
@@ -47,6 +47,8 @@
         }
         
         .longText {
+            min-height: 350px;
+            max-height: 400px;
             font-size: 20px;
             color: #FFFFFF;
             padding: 10% 2%;
@@ -56,6 +58,57 @@
             font-weight: 999;
             font-size: 50px;
             color: #FFFFFF;
+        }
+
+        @media (max-width: 728px) {
+            .historyHeader   {
+                font-size: 20px;
+                display: flex;
+                justify-content: space-evenly;
+                margin-top: 10%;
+                color: #000000;
+            }
+
+            .wideBack {
+                height: fit-content;
+                min-height: 100%;
+                width: 100%;
+            }
+
+            .content {
+                background-color: #000000;
+                height: fit-content;
+                min-height: 100%;
+                border: 2px solid;
+                border-radius: 20px;
+                display: flex;
+                flex-direction: column;
+                margin: 2% 10%; 
+            }
+            .longText {
+                min-height: 550px;
+                min-width: 250px;
+                font-size: 20px;
+                color: #FFFFFF;
+                padding: 5% 2%;
+            }
+
+            div > h2 {
+                font-weight: 999;
+                font-size: 50px;
+                color: #FFFFFF;
+            }
+            img {
+                min-width: 250px;
+            }
+            .years1, .years2 {      
+                margin-left: 10%;
+            }
+            .photos {
+                margin-left: 5%;
+                margin-top: -30%;
+                min-height: 500px;
+            }
         }
     </style>
     <script src="https://code.jquery.com/jquery-3.7.1.js"
@@ -75,10 +128,10 @@
         </div>
         <div id="sideMenu">
             <a href="javascript:void(0)" class="closebtn" onclick="menuClose()">&times;</a>
-            <a href="../../catalog.html">Order Now</a>
+            <a href="catalog.html">Order Now</a>
             <a href="catering.html">Catering</a>
             <a href="#">Testimonials</a>
-            <a href="#">About Us</a>
+            <a href="ourHistory.html">About Us</a>
         </div>
         <div class="historyHeader">
             <h1>Our History</h1>
@@ -109,9 +162,7 @@
                     that our first breakthrough occurred—a flavor so
                     unexpected, so unconventional, that it shattered all
                     preconceived notions of what ice cream could be. Each new
-                    batch was a gamble, a fusion of art and science, as we
-                    blended the most improbable ingredients to see what magic
-                    could arise.
+                    batch was a gamble.
 
                 </div>
             </div>

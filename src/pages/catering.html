@@ -16,144 +16,149 @@
     </script>
 </head>
 <body>
-    <div class="wideBack">
-        <div class="navBarContainer">
-            <header class="navBar">
-                <div id="overlay">
-                    <a href="home.html" class="active">Flash Freeze Parlor</a>
-                    <div class="menu" style="text-align:right;cursor:default" onclick="menuOpen()"> &#9776; </div>
-                </div>
-            </header>
-        </div>
+    <div class="navBarContainer">
+        <header class="navBar">
+            <div id="overlay">
+                <a href="home.html" class="active">Flash Freeze Parlor</a>
+                <div class="menu" style="text-align:right;cursor:default" onclick="menuOpen()"> &#9776; </div>
+            </div>
+        </header>
+    </div>
 
-        <div id="sideMenu">
-            <a href="javascript:void(0)" class="closebtn" onclick="menuClose()">&times;</a>
-            <a href="../../catalog.html">Order Now</a>
-            <a href="catering.html">Catering</a>
-            <a href="#">Testimonials</a>
-            <a href="#">About Us</a>
-        </div>
+    <div id="sideMenu">
+        <a href="javascript:void(0)" class="closebtn" onclick="menuClose()">&times;</a>
+        <a href="catalog.html">Order Now</a>
+        <a href="catering.html">Catering</a>
+        <a href="#">Testimonials</a>
+        <a href="ourHistory.html">About Us</a>
+    </div>
 
-        <form class="cateringForm">
-            <div class="cateringFormContainer">
-                <div class="cateringFormHeader">
-                    <h1>Catering Form</h1>
-                </div>
-                <div class="row" id="basicInfo">
-                    <div class="label">Name: </div>
-                    <input type="text">
-                </div>
-                <div class="row" id="basicInfo">
-                    <div class="label">Date: </div>
-                    <input type="date">
-                </div>
-                <div class="row" id="basicInfo">
-                    <div class="label">Type of Event: </div>
-                    <input type="text">
-                </div>
-                <div class="row" id="basicInfo">
-                    <div class="label">Pick up time: </div>
-                    <input type="text">
-                </div>
-                <div class="row" id="basicInfo">
-                    <div class="label">Phone Number: </div>
-                    <input type="text">
-                </div>
-                <div class="row" id="basicInfo">
-                    <div class="label">Number of guests: </div>
-                    <input type="text">
-                </div>
-                <div class="row" id="basicInfo"> 
-                    <div class="label">Delivery or pickup: </div>
-                    <div class="devPickOption">   
-                        <div>
-                            <label>Delivery</label>
-                            <input type="radio" name="buyOption">
-                        </div>
-                        <div>   
-                            <label>Pickup</label>
-                            <input type="radio" name="buyOption">
-                        </div>
-                    </div>     
-                </div>
-                <div class="row" id="ordering">
-                    <div class="orderHeader"><h2>Place your order</h2></div>
-                </div>
-                <div class="row" id="order1">
-                    <div class="label" id="item" data-flavor="Vanilla">Vanilla</div>
-                    <div style="display:flex">
-                        <button type="button" class="qty-btn" onclick="decrement(this.id[3])" id="dec1">-</button>
-                        <div class="qty" id="qty1">0</div>
-                        <button type="button" class="qty-btn" onclick="increment(this.id[3])" id="inc1">+</button>
+    <form class="cateringForm">
+        <div class="cateringFormContainer">
+            <div class="cateringFormHeader">
+                <h1>Catering Form</h1>
+            </div>
+            <div class="row" id="basicInfo">
+                <div class="label">Name: </div>
+                <input type="text" name="name" id="name">
+            </div>
+            <div class="row" id="basicInfo">
+                <div class="label">Date: </div>
+                <input type="date" name="date" id="date">
+            </div>
+            <div class="row" id="basicInfo">
+                <div class="label">Type of Event: </div>
+                <input type="text" name="typeEvent" id="typeEvent">
+            </div>
+            <div class="row" id="basicInfo">
+                <div class="label">Pick up time: </div>
+                <input type="text" name="pickUp" id="pickUp">
+            </div>
+            <div class="row" id="basicInfo">
+                <div class="label">Phone Number: </div>
+                <input type="text" name="phone" id="phone">
+            </div>
+            <div class="row" id="basicInfo">
+                <div class="label">Number of guests: </div>
+                <input type="text" name="guests" id="guests">
+            </div>
+            <div class="row" id="basicInfo"> 
+                <div class="label">Delivery or pickup: </div>
+                <div class="devPickOption">   
+                    <div>
+                        <label>Delivery
+                            <input type="radio" name="buyOption" value="del" id="del">
+                        </label>
+                        
                     </div>
-                </div>
-                <div class="row" id="order2">
-                    <div class="label" id="item" data-flavor="Chocolate">Chocolate</div>
-                    <div style="display:flex">
-                        <button type="button" class="qty-btn" onclick="decrement(this.id[3])" id="dec2">-</button>
-                        <div class="qty" id="qty2">0</div>
-                        <button type="button" class="qty-btn" onclick="increment(this.id[3])" id="inc2">+</button>
+                    <div>   
+                        <label>Pickup
+                            <input type="radio" name="buyOption" value="pickup" id="pickup">
+                        </label>
+                        
                     </div>
-                </div>
-                <div class="row" id="order3">
-                    <div class="label" id="item" data-flavor="Strawberry">Strawberry</div>
-                    <div style="display:flex">
-                        <button type="button" class="qty-btn" onclick="decrement(this.id[3])" id="dec3">-</button>
-                        <div class="qty" id="qty3">0</div>
-                        <button type="button" class="qty-btn" onclick="increment(this.id[3])" id="inc3">+</button>
-                    </div>
-                </div>
-                <div class="row" id="order4">
-                    <div class="label" id="item" data-flavor="Mint Chocolate Chip">Mint Chocolate Chip</div>
-                    <div style="display:flex">
-                        <button type="button" class="qty-btn" onclick="decrement(this.id[3])" id="dec4">-</button>
-                        <div class="qty" id="qty4">0</div>
-                        <button type="button" class="qty-btn" onclick="increment(this.id[3])" id="inc4">+</button>
-                    </div>
-                </div>
-                <div class="row" id="order5">
-                    <div class="label" id="item" data-flavor="Rocky Road">Rocky Road</div>
-                    <div style="display:flex">
-                        <button type="button" class="qty-btn" onclick="decrement(this.id[3])" id="dec5">-</button>
-                        <div class="qty" id="qty5">0</div>
-                        <button type="button" class="qty-btn" onclick="increment(this.id[3])" id="inc5">+</button>
-                    </div>
-                </div>
-                <div class="row" id="order6">
-                    <div class="label" id="item" data-flavor="Coffee">Coffee</div>
-                    <div style="display:flex">
-                        <button type="button" class="qty-btn" onclick="decrement(this.id[3])" id="dec6">-</button>
-                        <div class="qty" id="qty6">0</div>
-                        <button type="button" class="qty-btn" onclick="increment(this.id[3])" id="inc6">+</button>
-                    </div>
-                </div>
-                <div class="row" id="order7">
-                    <div class="label" id="item" data-flavor="Matcha">Matcha</div>
-                    <div style="display:flex">
-                        <button type="button" class="qty-btn" onclick="decrement(this.id[3])" id="dec7">-</button>
-                        <div class="qty" id="qty7">0</div>
-                        <button type="button" class="qty-btn" onclick="increment(this.id[3])" id="inc7">+</button>
-                    </div>
-                </div>
-                <div class="row" id="order8">
-                    <div class="label" id="item" data-flavor="Milk Tea">Milk Tea</div>
-                    <div style="display:flex">
-                        <button type="button" class="qty-btn" onclick="decrement(this.id[3])" id="dec8">-</button>
-                        <div class="qty" id="qty8">0</div>
-                        <button type="button" class="qty-btn" onclick="increment(this.id[3])" id="inc8">+</button>
-                    </div>
-                </div>
-                <div class="row" id="order9">
-                    <div class="label" id="item" data-flavor="Ube">Ube</div>
-                    <div style="display:flex">
-                        <button type="button" class="qty-btn" onclick="decrement(this.id[3])" id="dec9">-</button>
-                        <div class="qty" id="qty9">0</div>
-                        <button type="button" class="qty-btn" onclick="increment(this.id[3])" id="inc9">+</button>
-                    </div>
+                </div>     
+            </div>
+            <div class="row" id="ordering">
+                <div class="orderHeader"><h2>Place your order</h2></div>
+            </div>
+            <div class="row" id="order1">
+                <div class="label" id="item" data-flavor="Vanilla">Vanilla</div>
+                <div style="display:flex">
+                    <button type="button" class="qty-btn" onclick="decrement(this.id[3])" id="dec1">-</button>
+                    <div class="qty" id="qty1">0</div>
+                    <button type="button" class="qty-btn" onclick="increment(this.id[3])" id="inc1">+</button>
                 </div>
             </div>
-        </form>
-    </div>
+            <div class="row" id="order2">
+                <div class="label" id="item" data-flavor="Chocolate">Chocolate</div>
+                <div style="display:flex">
+                    <button type="button" class="qty-btn" onclick="decrement(this.id[3])" id="dec2">-</button>
+                    <div class="qty" id="qty2">0</div>
+                    <button type="button" class="qty-btn" onclick="increment(this.id[3])" id="inc2">+</button>
+                </div>
+            </div>
+            <div class="row" id="order3">
+                <div class="label" id="item" data-flavor="Strawberry">Strawberry</div>
+                <div style="display:flex">
+                    <button type="button" class="qty-btn" onclick="decrement(this.id[3])" id="dec3">-</button>
+                    <div class="qty" id="qty3">0</div>
+                    <button type="button" class="qty-btn" onclick="increment(this.id[3])" id="inc3">+</button>
+                </div>
+            </div>
+            <div class="row" id="order4">
+                <div class="label" id="item" data-flavor="Mint Chocolate Chip">Mint Chocolate Chip</div>
+                <div style="display:flex">
+                    <button type="button" class="qty-btn" onclick="decrement(this.id[3])" id="dec4">-</button>
+                    <div class="qty" id="qty4">0</div>
+                    <button type="button" class="qty-btn" onclick="increment(this.id[3])" id="inc4">+</button>
+                </div>
+            </div>
+            <div class="row" id="order5">
+                <div class="label" id="item" data-flavor="Rocky Road">Rocky Road</div>
+                <div style="display:flex">
+                    <button type="button" class="qty-btn" onclick="decrement(this.id[3])" id="dec5">-</button>
+                    <div class="qty" id="qty5">0</div>
+                    <button type="button" class="qty-btn" onclick="increment(this.id[3])" id="inc5">+</button>
+                </div>
+            </div>
+            <div class="row" id="order6">
+                <div class="label" id="item" data-flavor="Coffee">Coffee</div>
+                <div style="display:flex">
+                    <button type="button" class="qty-btn" onclick="decrement(this.id[3])" id="dec6">-</button>
+                    <div class="qty" id="qty6">0</div>
+                    <button type="button" class="qty-btn" onclick="increment(this.id[3])" id="inc6">+</button>
+                </div>
+            </div>
+            <div class="row" id="order7">
+                <div class="label" id="item" data-flavor="Matcha">Matcha</div>
+                <div style="display:flex">
+                    <button type="button" class="qty-btn" onclick="decrement(this.id[3])" id="dec7">-</button>
+                    <div class="qty" id="qty7">0</div>
+                    <button type="button" class="qty-btn" onclick="increment(this.id[3])" id="inc7">+</button>
+                </div>
+            </div>
+            <div class="row" id="order8">
+                <div class="label" id="item" data-flavor="Milk Tea">Milk Tea</div>
+                <div style="display:flex">
+                    <button type="button" class="qty-btn" onclick="decrement(this.id[3])" id="dec8">-</button>
+                    <div class="qty" id="qty8">0</div>
+                    <button type="button" class="qty-btn" onclick="increment(this.id[3])" id="inc8">+</button>
+                </div>
+            </div>
+            <div class="row" id="order9">
+                <div class="label" id="item" data-flavor="Ube">Ube</div>
+                <div style="display:flex">
+                    <button type="button" class="qty-btn" onclick="decrement(this.id[3])" id="dec9">-</button>
+                    <div class="qty" id="qty9">0</div>
+                    <button type="button" class="qty-btn" onclick="increment(this.id[3])" id="inc9">+</button>
+                </div>
+            </div>
+            <div class="row" id="submitBtn">
+                <button type="submit" id="submit">Submit</button>
+            </div>
+        </div>
+    </form>
     <div class="sideShadow" onclick="menuClose()"></div>
 
     <script>

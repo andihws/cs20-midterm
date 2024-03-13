@@ -2,150 +2,282 @@
 <html>
     <head>
         <title>Catalog</title>
-        <link rel="stylesheet" href="../styles/style.css"/>
-        <link rel="stylesheet" href="../styles/nav.css"/>
+        <link rel="stylesheet" href="style.css"/>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat"/>
-        <script src="../scripts/scriptCatalog.js"></script>
-        <script src="https://code.jquery.com/jquery-3.7.1.js"
-            integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" 
-            crossorigin="anonymous">
-    </script>
+        <style>
+            body {
+                font-family: "Montserrat";
+                margin: 0;
+                padding: 0;
+            }
+
+            table {
+                background-color: #ffffff;
+                border: 1px solid #d3d3d3;
+                width: 100%;
+            }
+
+            td {
+                line-height: 25px;
+            }
+
+            button {
+                cursor: pointer;
+            }
+
+            div img {
+                width: 100%;
+            }
+
+            .layout {
+                display: flex;
+            }
+
+            .grid {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                width: 1000px;
+                padding: 50px 0;
+            }
+
+            .item {
+                background-color: #ffffff;
+                border: 2px solid #dedaf4;
+                border-radius: 35px 35px 40px 40px;
+                text-align: center;
+                width: 250px;
+                height: 325px;
+                margin: 15px;
+                padding: 10px;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .product {
+                border-radius: 25px;
+                height: 250px;
+                margin-bottom: auto;
+                overflow: hidden;
+            }
+
+            .qty-select {
+                border: 1px solid #d3d3d3;
+                border-radius: 30px;
+                display: flex;
+            }
+
+            .qty-btn {
+                background-color: #36454f;
+                border: 1px solid #d3d3d3;
+                border-radius: 25px;
+                color: #ffffff;
+                font-size: 18px;
+                width: 50px;
+                margin: 5px;
+            }
+
+            .qty {
+                color: #36454f;
+                font-size: 18px;
+                line-height: 60px;
+                text-align: center;
+                flex-grow: 1;
+            }
+
+            .sidebar {
+                background-color: #f5f5f5;
+                text-align: center;
+                flex-grow: 1;
+                padding: 75px;
+            }
+
+            .header {
+                background-color: #36454f;
+                border: 1px solid #d3d3d3;
+                border-radius: 10px;
+                color: #ffffff;
+                line-height: 50px;
+            }
+
+            .cart {
+                border-radius: 10px 10px 0 0;
+                min-height: 200px;
+                margin-top: 15px;
+                padding: 30px 40px;
+            }
+            
+            .total {
+                border-top: none;
+                border-radius: 0 0 10px 10px;
+                margin-bottom: 15px;
+                padding: 15px 40px;
+            }
+
+            #cart-prod, #cart-total-1 {
+                text-align: left;
+            }
+
+            #cart-qty, #cart-total-2 {
+                text-align: right;
+            }
+
+            #cart-prod, #cart-qty {
+                vertical-align: top;
+            }
+
+            #cart-total-1, #cart-total-2 {
+                vertical-align: bottom;
+            }
+
+            .order {
+                background-color: #ffffff;
+                border: 1px solid #d3d3d3;
+                border-radius: 10px;
+                color: #36454f;
+                font-family: "Montserrat";
+                font-size: 16px;
+                width: 100%;
+                min-width: 252px;
+                height: 50px;
+                padding: 8px;
+            }
+
+            .order:hover {
+                background-color: #36454f;
+                border-color: #36454f;
+                color: #ffffff;
+            }
+
+            .placeholder {
+                background-color: #36454f;
+                height: 100px;
+            }
+        </style>
+        <script src="../scripts/catalog.js"></script>
     </head>
-    <body>
-         
-        <div class="navBarContainer">
-            <header class="navBar">
-                <div id="overlay">
-                    <a href="home.html" class="active">Flash Freeze Parlor</a>
-                    <div class="menu" style="text-align:right;cursor:default" onclick="menuOpen()"> &#9776; </div>
-                </div>
-            </header>
-        </div>
-
-        <div id="sideMenu">
-            <a href="javascript:void(0)" class="closebtn" onclick="menuClose()">&times;</a>
-            <a href="catalog.html">Order Now</a>
-            <a href="catering.html">Catering</a>
-            <a href="#">Testimonials</a>
-            <a href="ourHistory.html">About Us</a>
-        </div>
-
-        <div class="sideShadow" onclick="menuClose()"></div>
-
-        <script>
-            function menuOpen() {
-                $("#sideMenu").css("right", "0px");
-                $(".sideShadow").toggle();
-            }
-
-            function menuClose() {
-                $("#sideMenu").css("right", "-250px");
-                $(".sideShadow").toggle();
-            }
-        </script>
+    <html>
+        <div class="placeholder"></div>
         <div class="layout">
             <div class="grid">
-                <div class="item" data-flavor="Vanilla">
+                <div class="item" data-flavor="Bacon Maple">
                     <div class="product">
-                        <!-- <img src="img/placeholder.avif"/> -->
+                        <img src="../../img/bacon_maple.jpg"/>
                     </div>
                     <div class="qty-select">
-                        <button class="qty-btn" onclick="decrement(this.id[3])" id="dec1">-</button>
+                        <button class="qty-btn" onclick="decrement(this.id.substring(3))" id="dec1">-</button>
                         <div class="qty" id="qty1">0</div>
-                        <button class="qty-btn" onclick="increment(this.id[3])" id="inc1">+</button>
+                        <button class="qty-btn" onclick="increment(this.id.substring(3))" id="inc1">+</button>
                     </div>
                 </div>
-                <div class="item" data-flavor="Chocolate">
+                <div class="item" data-flavor="Blackberry Balsamic">
                     <div class="product">
-                        <!-- <img src="img/placeholder.avif"/> -->
+                        <img src="../../img/blackberry_balsamic.jpg"/>
                     </div>
                     <div class="qty-select">
-                        <button class="qty-btn" onclick="decrement(this.id[3])" id="dec2">-</button>
+                        <button class="qty-btn" onclick="decrement(this.id.substring(3))" id="dec2">-</button>
                         <div class="qty" id="qty2">0</div>
-                        <button class="qty-btn" onclick="increment(this.id[3])" id="inc2">+</button>
+                        <button class="qty-btn" onclick="increment(this.id.substring(3))" id="inc2">+</button>
                     </div>
                 </div>
-                <div class="item" data-flavor="Strawberry">
+                <div class="item" data-flavor="Corn and Raspberry">
                     <div class="product">
-                        <!-- <img src="img/placeholder.avif"/> -->
+                        <img src="../../img/corn_and_raspberry.jpg"/>
                     </div>
                     <div class="qty-select">
-                        <button class="qty-btn" onclick="decrement(this.id[3])" id="dec3">-</button>
+                        <button class="qty-btn" onclick="decrement(this.id.substring(3))" id="dec3">-</button>
                         <div class="qty" id="qty3">0</div>
-                        <button class="qty-btn" onclick="increment(this.id[3])" id="inc3">+</button>
+                        <button class="qty-btn" onclick="increment(this.id.substring(3))" id="inc3">+</button>
                     </div>
                 </div>
-                <div class="item" data-flavor="Mint Chocolate Chip">
+                <div class="item" data-flavor="Espresso Martini">
                     <div class="product">
-                        <!-- <img src="img/placeholder.avif"/> -->
+                        <img src="../../img/espresso_martini.jpg"/>
                     </div>
                     <div class="qty-select">
-                        <button class="qty-btn" onclick="decrement(this.id[3])" id="dec4">-</button>
+                        <button class="qty-btn" onclick="decrement(this.id.substring(3))" id="dec4">-</button>
                         <div class="qty" id="qty4">0</div>
-                        <button class="qty-btn" onclick="increment(this.id[3])" id="inc4">+</button>
+                        <button class="qty-btn" onclick="increment(this.id.substring(3))" id="inc4">+</button>
                     </div>
                 </div>
-                <div class="item" data-flavor="Rocky Road">
+                <div class="item" data-flavor="Lavender Honey Crunch">
                     <div class="product">
-                        <!-- <img src="img/placeholder.avif"/> -->
+                        <img src="../../img/lavender_honey_crunch.jpg"/>
                     </div>
                     <div class="qty-select">
-                        <button class="qty-btn" onclick="decrement(this.id[3])" id="dec5">-</button>
+                        <button class="qty-btn" onclick="decrement(this.id.substring(3))" id="dec5">-</button>
                         <div class="qty" id="qty5">0</div>
-                        <button class="qty-btn" onclick="increment(this.id[3])" id="inc5">+</button>
+                        <button class="qty-btn" onclick="increment(this.id.substring(3))" id="inc5">+</button>
                     </div>
                 </div>
-                <div class="item" data-flavor="Coffee">
+                <div class="item" data-flavor="Matcha Green Tea">
                     <div class="product">
-                        <!-- <img src="img/placeholder.avif"/> -->
+                        <img src="../../img/matcha_green_tea.jpg"/>
                     </div>
                     <div class="qty-select">
-                        <button class="qty-btn" onclick="decrement(this.id[3])" id="dec6">-</button>
+                        <button class="qty-btn" onclick="decrement(this.id.substring(3))" id="dec6">-</button>
                         <div class="qty" id="qty6">0</div>
-                        <button class="qty-btn" onclick="increment(this.id[3])" id="inc6">+</button>
+                        <button class="qty-btn" onclick="increment(this.id.substring(3))" id="inc6">+</button>
                     </div>
                 </div>
-                <div class="item" data-flavor="Matcha">
+                <div class="item" data-flavor="Pumpkin Spice">
                     <div class="product">
-                        <!-- <img src="img/placeholder.avif"/> -->
+                        <img src="../../img/pumpkin_spice.jpg"/>
                     </div>
                     <div class="qty-select">
-                        <button class="qty-btn" onclick="decrement(this.id[3])" id="dec7">-</button>
+                        <button class="qty-btn" onclick="decrement(this.id.substring(3))" id="dec7">-</button>
                         <div class="qty" id="qty7">0</div>
-                        <button class="qty-btn" onclick="increment(this.id[3])" id="inc7">+</button>
+                        <button class="qty-btn" onclick="increment(this.id.substring(3))" id="inc7">+</button>
                     </div>
                 </div>
-                <div class="item" data-flavor="Milk Tea">
+                <div class="item" data-flavor="Salty Caramel Pretzel">
                     <div class="product">
-                        <!-- <img src="img/placeholder.avif"/> -->
+                        <img src="../../img/salty_caramel_pretzel.jpg"/>
                     </div>
                     <div class="qty-select">
-                        <button class="qty-btn" onclick="decrement(this.id[3])" id="dec8">-</button>
+                        <button class="qty-btn" onclick="decrement(this.id.substring(3))" id="dec8">-</button>
                         <div class="qty" id="qty8">0</div>
-                        <button class="qty-btn" onclick="increment(this.id[3])" id="inc8">+</button>
+                        <button class="qty-btn" onclick="increment(this.id.substring(3))" id="inc8">+</button>
                     </div>
                 </div>
-                <div class="item" data-flavor="Ube">
+                <div class="item" data-flavor="Spiced Pear">
                     <div class="product">
-                        <!-- <img src="img/placeholder.avif"/> -->
+                        <img src="../../img/spiced_pear.jpg"/>
                     </div>
                     <div class="qty-select">
-                        <button class="qty-btn" onclick="decrement(this.id[3])" id="dec9">-</button>
+                        <button class="qty-btn" onclick="decrement(this.id.substring(3))" id="dec9">-</button>
                         <div class="qty" id="qty9">0</div>
-                        <button class="qty-btn" onclick="increment(this.id[3])" id="inc9">+</button>
+                        <button class="qty-btn" onclick="increment(this.id.substring(3))" id="inc9">+</button>
+                    </div>
+                </div>
+                <div class="item" data-flavor="Toasted Coconut">
+                    <div class="product">
+                        <img src="../../img/toasted_coconut.jpg"/>
+                    </div>
+                    <div class="qty-select">
+                        <button class="qty-btn" onclick="decrement(this.id.substring(3))" id="dec10">-</button>
+                        <div class="qty" id="qty10">0</div>
+                        <button class="qty-btn" onclick="increment(this.id.substring(3))" id="inc10">+</button>
                     </div>
                 </div>
             </div>
             <div class="sidebar">
                 <div class="header">Checkout</div>
-                <table id="cart">
+                <table class="cart">
                     <tr>
-                        <td class="cart" id="cart-prod"></td>
-                        <td class="cart" id="cart-qty"></td>
+                        <td id="cart-prod"></td>
+                        <td id="cart-qty"></td>
+                    </tr>
+                </table>
+                <table class="total">
+                    <tr>
+                        <td id="cart-total-1">Total</td>
+                        <td id="cart-total-2">$0.00</td>
                     </tr>
                 </table>
                 <button class="order">ORDER NOW</button>
             </div>
         </div>
-    </body>
+        <div class="nav-foot"></div>
+    </html>
 </html>

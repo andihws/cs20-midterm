@@ -3,6 +3,7 @@
     <head>
         <title>Catalog</title>
         <link rel="stylesheet" href="../styles/nav.css"/>
+        <link rel="stylesheet" href="../styles/footer.css"/>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat"/>
         <style>
             body {
@@ -89,7 +90,7 @@
                 background-color: #6a5a8a;
                 text-align: center;
                 flex-grow: 1;
-                padding: 115px 75px;
+                padding: 115px 50px;
             }
 
             .header {
@@ -102,6 +103,7 @@
 
             .cart {
                 border-radius: 10px 10px 0 0;
+                font-size: 14px;
                 min-height: 200px;
                 margin-top: 15px;
                 padding: 30px 40px;
@@ -184,9 +186,9 @@
         </script>
         <div class="layout">
             <div class="grid">
-                <div class="item" data-flavor="Bacon Maple">
+                <div class="item" data-flavor="Lavender Honeycomb Crunch">
                     <div class="product">
-                        <img src="../../img/bacon_maple.jpg"/>
+                        <img src="../../img/lavender_honey_crunch.jpg"/>
                     </div>
                     <div class="qty-select">
                         <button class="qty-btn" onclick="decrement(this.id.substring(3))" id="dec1">-</button>
@@ -194,9 +196,9 @@
                         <button class="qty-btn" onclick="increment(this.id.substring(3))" id="inc1">+</button>
                     </div>
                 </div>
-                <div class="item" data-flavor="Blackberry Balsamic">
+                <div class="item" data-flavor="Salty Caramel Pretzel Swirl">
                     <div class="product">
-                        <img src="../../img/blackberry_balsamic.jpg"/>
+                        <img src="../../img/salty_caramel_pretzel.jpg"/>
                     </div>
                     <div class="qty-select">
                         <button class="qty-btn" onclick="decrement(this.id.substring(3))" id="dec2">-</button>
@@ -204,9 +206,9 @@
                         <button class="qty-btn" onclick="increment(this.id.substring(3))" id="inc2">+</button>
                     </div>
                 </div>
-                <div class="item" data-flavor="Corn and Raspberry">
+                <div class="item" data-flavor="Spiced Pear & Blue Cheese">
                     <div class="product">
-                        <img src="../../img/corn_and_raspberry.jpg"/>
+                        <img src="../../img/spiced_pear.jpg"/>
                     </div>
                     <div class="qty-select">
                         <button class="qty-btn" onclick="decrement(this.id.substring(3))" id="dec3">-</button>
@@ -214,9 +216,9 @@
                         <button class="qty-btn" onclick="increment(this.id.substring(3))" id="inc3">+</button>
                     </div>
                 </div>
-                <div class="item" data-flavor="Espresso Martini">
+                <div class="item" data-flavor="Matcha Green Tea & Black Sesame">
                     <div class="product">
-                        <img src="../../img/espresso_martini.jpg"/>
+                        <img src="../../img/matcha_green_tea.jpg"/>
                     </div>
                     <div class="qty-select">
                         <button class="qty-btn" onclick="decrement(this.id.substring(3))" id="dec4">-</button>
@@ -224,9 +226,9 @@
                         <button class="qty-btn" onclick="increment(this.id.substring(3))" id="inc4">+</button>
                     </div>
                 </div>
-                <div class="item" data-flavor="Lavender Honey Crunch">
+                <div class="item" data-flavor="Espresso Martini Madness">
                     <div class="product">
-                        <img src="../../img/lavender_honey_crunch.jpg"/>
+                        <img src="../../img/espresso_martini.jpg"/>
                     </div>
                     <div class="qty-select">
                         <button class="qty-btn" onclick="decrement(this.id.substring(3))" id="dec5">-</button>
@@ -234,9 +236,9 @@
                         <button class="qty-btn" onclick="increment(this.id.substring(3))" id="inc5">+</button>
                     </div>
                 </div>
-                <div class="item" data-flavor="Matcha Green Tea">
+                <div class="item" data-flavor="Sweet Corn & Raspberry Ripple">
                     <div class="product">
-                        <img src="../../img/matcha_green_tea.jpg"/>
+                        <img src="../../img/corn_and_raspberry.jpg"/>
                     </div>
                     <div class="qty-select">
                         <button class="qty-btn" onclick="decrement(this.id.substring(3))" id="dec6">-</button>
@@ -244,9 +246,9 @@
                         <button class="qty-btn" onclick="increment(this.id.substring(3))" id="inc6">+</button>
                     </div>
                 </div>
-                <div class="item" data-flavor="Pumpkin Spice">
+                <div class="item" data-flavor="Toasted Coconut & Lime Zest">
                     <div class="product">
-                        <img src="../../img/pumpkin_spice.jpg"/>
+                        <img src="../../img/toasted_coconut.jpg"/>
                     </div>
                     <div class="qty-select">
                         <button class="qty-btn" onclick="decrement(this.id.substring(3))" id="dec7">-</button>
@@ -254,9 +256,9 @@
                         <button class="qty-btn" onclick="increment(this.id.substring(3))" id="inc7">+</button>
                     </div>
                 </div>
-                <div class="item" data-flavor="Salty Caramel Pretzel">
+                <div class="item" data-flavor="Pumpkin Spice Latte">
                     <div class="product">
-                        <img src="../../img/salty_caramel_pretzel.jpg"/>
+                        <img src="../../img/pumpkin_spice.jpg"/>
                     </div>
                     <div class="qty-select">
                         <button class="qty-btn" onclick="decrement(this.id.substring(3))" id="dec8">-</button>
@@ -264,9 +266,9 @@
                         <button class="qty-btn" onclick="increment(this.id.substring(3))" id="inc8">+</button>
                     </div>
                 </div>
-                <div class="item" data-flavor="Spiced Pear">
+                <div class="item" data-flavor="Bacon Maple Pancake">
                     <div class="product">
-                        <img src="../../img/spiced_pear.jpg"/>
+                        <img src="../../img/bacon_maple.jpg"/>
                     </div>
                     <div class="qty-select">
                         <button class="qty-btn" onclick="decrement(this.id.substring(3))" id="dec9">-</button>
@@ -274,14 +276,34 @@
                         <button class="qty-btn" onclick="increment(this.id.substring(3))" id="inc9">+</button>
                     </div>
                 </div>
-                <div class="item" data-flavor="Toasted Coconut">
+                <div class="item" data-flavor="Mojito Sorbet">
                     <div class="product">
-                        <img src="../../img/toasted_coconut.jpg"/>
+                        <img src="../../img/mojito_sorbet.jpg"/>
                     </div>
                     <div class="qty-select">
                         <button class="qty-btn" onclick="decrement(this.id.substring(3))" id="dec10">-</button>
                         <div class="qty" id="qty10">0</div>
                         <button class="qty-btn" onclick="increment(this.id.substring(3))" id="inc10">+</button>
+                    </div>
+                </div>
+                <div class="item" data-flavor="Fig & Honey Cheesecake">
+                    <div class="product">
+                        <img src="../../img/fig_and_honey_cheesecake.jpg"/>
+                    </div>
+                    <div class="qty-select">
+                        <button class="qty-btn" onclick="decrement(this.id.substring(3))" id="dec11">-</button>
+                        <div class="qty" id="qty11">0</div>
+                        <button class="qty-btn" onclick="increment(this.id.substring(3))" id="inc11">+</button>
+                    </div>
+                </div>
+                <div class="item" data-flavor="Blackberry Balsamic Bliss">
+                    <div class="product">
+                        <img src="../../img/blackberry_balsamic.jpg"/>
+                    </div>
+                    <div class="qty-select">
+                        <button class="qty-btn" onclick="decrement(this.id.substring(3))" id="dec12">-</button>
+                        <div class="qty" id="qty12">0</div>
+                        <button class="qty-btn" onclick="increment(this.id.substring(3))" id="inc12">+</button>
                     </div>
                 </div>
             </div>
@@ -301,6 +323,9 @@
                 </table>
                 <button class="order">ORDER NOW</button>
             </div>
+        </div>
+        <div class="footer">
+            <p>Flash Freeze Parlor LLC</p>
         </div>
     </html>
 </html>
